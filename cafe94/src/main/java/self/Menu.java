@@ -14,6 +14,7 @@ public class Menu {
         App.setRoot("view");
     }
     //login page
+    //login page second change
     // cpommment
     //need to add some stuff
 }
