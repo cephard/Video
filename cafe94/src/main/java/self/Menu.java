@@ -13,6 +13,8 @@ public class Menu {
     private void switchToView() throws IOException {
         App.setRoot("view");
     }
+    //login page
+    //login page second change
     // cpommment
     //need to add some stuff
 }
