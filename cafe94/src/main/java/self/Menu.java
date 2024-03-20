@@ -13,4 +13,5 @@ public class Menu {
     private void switchToView() throws IOException {
         App.setRoot("view");
     }
+    //need to add some stuff
 }
