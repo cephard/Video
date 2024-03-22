@@ -1,17 +1,16 @@
-package self;
+package login;
 
-import java.util.HashMap;
 import java.io.IOException;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import self.App;
 
 
 public class LoginController {
 
-    private final String admin_User = "admin";
-    private final String admin_Pass = "admin";
+    protected final String admin_User = "admin";
+    protected final String admin_Pass = "admin";
     public static String userName1;
      @FXML private TextField UserNameButton;
     @FXML private TextField passwordButton;
@@ -20,7 +19,7 @@ public class LoginController {
     static UserData data = new UserData();
 
     @FXML
-    private void switchToResult() throws IOException {
+    public void switchToResult() throws IOException {
 
             String userName = UserNameButton.getText();
             String userPassword = passwordButton.getText();
@@ -40,7 +39,7 @@ public class LoginController {
         return data.getUserName(userName1);
     }
      @FXML
-     private void switchToView() throws IOException {
+     public void switchToView() throws IOException {
          App.setRoot("view");
      }
 }

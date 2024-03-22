@@ -7,7 +7,7 @@ public class CustomerController {
 
     @FXML
     private void switchToLogin() throws IOException {
-        App.setRoot("login");
+        App.setRoot("loginOrSignUpPage");
     }
     @FXML
     private void switchToView() throws IOException {

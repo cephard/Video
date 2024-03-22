@@ -4,4 +4,7 @@ module self {
 
     opens self to javafx.fxml;
     exports self;
+
+    opens login to javafx.fxml;
+    exports login;
 }
