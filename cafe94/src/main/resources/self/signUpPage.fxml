@@ -7,7 +7,6 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 
-
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.SignUpController">
    <children>
       <Label layoutX="37.0" layoutY="36.0" prefHeight="20.0" prefWidth="60.0" text="First Name" />
@@ -15,19 +14,19 @@
       <Label layoutX="37.0" layoutY="149.0" prefHeight="20.0" prefWidth="60.0" text="Gmail" />
       <Label layoutX="226.0" layoutY="149.0" prefHeight="20.0" prefWidth="60.0" text="PhoneNumber" />
       <Label layoutX="37.0" layoutY="262.0" prefHeight="20.0" prefWidth="92.0" text="ChoosePassword" />
-      <TextField layoutX="37.0" layoutY="56.0" promptText="FirstName " />
-      <TextField layoutX="37.0" layoutY="169.0" promptText="ex :- user@cafe94.com" />
+      <TextField fx:id="firstNameButton" layoutX="37.0" layoutY="56.0" promptText="FirstName " />
+      <TextField fx:id="gmailButton" layoutX="37.0" layoutY="169.0" promptText="ex :- user@cafe94.com" />
       <TextField layoutX="233.0" layoutY="115.0" promptText="Date/Month/Year" />
-      <TextField layoutX="226.0" layoutY="169.0" promptText="+44 1234567890" />
-      <TextField layoutX="37.0" layoutY="282.0" />
+      <TextField fx:id="phoneNumberButton" layoutX="226.0" layoutY="169.0" promptText="+44 1234567890" />
+      <TextField fx:id="passwordButton" layoutX="37.0" layoutY="282.0" />
       <Label layoutX="220.0" layoutY="36.0" prefHeight="20.0" prefWidth="60.0" text="Last Name" />
-      <TextField layoutX="212.0" layoutY="56.0" promptText="LastName" />
-      <TextField layoutX="37.0" layoutY="226.0" />
+      <TextField fx:id="lastNameButton" layoutX="212.0" layoutY="56.0" promptText="LastName" />
+      <TextField fx:id="addressButton" layoutX="37.0" layoutY="226.0" />
       <Button fx:id="mainPageButton" layoutX="513.0" layoutY="361.0" mnemonicParsing="false" onAction="#switchToView" text="StartOver" />
       <Label layoutX="37.0" layoutY="209.0" text="Address" />
-      <PasswordField layoutX="37.0" layoutY="315.0" />
+      <PasswordField fx:id="passwordConfirmButton" layoutX="37.0" layoutY="315.0" />
       <DatePicker layoutX="37.0" layoutY="115.0" />
       <Button fx:id="loginbutton" layoutX="440.0" layoutY="361.0" mnemonicParsing="false" onAction="#switchToLogin" text="Login" />
-      <Button layoutX="37.0" layoutY="349.0" mnemonicParsing="false" text="SignUp" />
+      <Button fx:id="signUpSaveButton" layoutX="37.0" layoutY="349.0" mnemonicParsing="false" onAction="#switchToSignIn" text="SignUp" />
    </children>
 </Pane>

@@ -1,10 +1,10 @@
 package login;
 
-import java.io.IOException;
-
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import self.App;
+
+import java.io.IOException;
 
 
 public class LoginController {
@@ -24,13 +24,17 @@ public class LoginController {
             String userName = UserNameButton.getText();
             String userPassword = passwordButton.getText();
 
-            if(data.checkUser(userName) && data.checkUserPass(userPassword) ) {
-            // if (userName.equals(admin_User) && userPassword.equals(admin_Pass)) {
-                userName1=userName;
-                App.setRoot("passResult");
-            } else {
-                App.setRoot("result");
-            }
+
+                if (data.checkUser(userName) && data.checkUserPass(userPassword)) {
+                    // if (userName.equals(admin_User) && userPassword.equals(admin_Pass)) {
+                    userName1 = userName;
+                    App.setRoot("passResult");
+                } else if (userName.isEmpty() || userPassword.isEmpty()) {
+                    App.setRoot("login");
+                } else {
+                    App.setRoot("result");
+                }
+
 
     }
 
