@@ -23,7 +23,7 @@ public class SignUpController {
 
     ArrayList<String> userData = new ArrayList<>();
     String pass = "success full ...plz LogIn";
-    String fail = " Password doesnt match Plzz try again";
+    String fail = " Password doesn't match please try again..!!!";
 
     @FXML
     public void switchToSignIn() throws IOException {
