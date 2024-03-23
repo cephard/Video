@@ -4,7 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import org.apache.poi.ss.usermodel.*;
 import self.App;
-
+import javafx.scene.text.Text;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -19,27 +19,31 @@ public class SignUpController {
     @FXML private TextField addressButton ;
     @FXML private TextField passwordButton ;
     @FXML private TextField  passwordConfirmButton;
-
+    @FXML private Text displayPasswordStatus;
 
     ArrayList<String> userData = new ArrayList<>();
+    String pass = "success full ...plz LogIn";
+    String fail = " Password doesnt match Plzz try again";
+
     @FXML
     public void switchToSignIn() throws IOException {
-      //  if(passwordButton.getText().equals(passwordConfirmButton.getText())) {
+        if(passwordButton.getText().equals(passwordConfirmButton.getText())) {
+            userData.add("CafeMate000");
             userData.add(firstNameButton.getText());
             userData.add(lastNameButton.getText());
             userData.add(gmailButton.getText());
             userData.add( addressButton.getText());
             userData.add(phoneNumberButton.getText());
             userData.add(passwordButton.getText());
-            String pass = passwordConfirmButton.getText();
-//        for(int i =0;i<6 ; i++) {
-//            userData.add("Try2");
-//        }
+
             saveNewUserData(userData);
+             displayPasswordStatus.setText(pass);
             App.setRoot("login");
-//        } else {
-//            App.setRoot("loginOrSignupPage");
-//        }
+        } else {
+
+            displayPasswordStatus.setText(fail);
+           //App.setRoot("signUpPage");
+        }
 
 
 
@@ -52,11 +56,14 @@ public class SignUpController {
             Workbook workbook = WorkbookFactory.create(fileInputStream);
             Sheet sheet = workbook.getSheet("UserData");
 
-            int r = sheet.getLastRowNum();
+            int r = sheet.getLastRowNum() +1;
             //int l=0;
-            Row row = sheet.createRow(r + 1);
-            for (int i = 0; i < 6; i++) {
-                Cell cell = row.createCell(i);
+            Row row = sheet.createRow(r );
+            Cell cell = row.createCell(0);
+            String regID = userData.get(0)+r+"";
+            cell.setCellValue(regID);
+            for (int i = 1; i < 7; i++) {
+                 cell = row.createCell(i);
                 cell.setCellValue(userData.get(i));
                 //System.out.println("Excel file edited successfully.");
             }

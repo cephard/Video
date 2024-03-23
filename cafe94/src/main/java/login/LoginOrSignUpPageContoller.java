@@ -12,7 +12,7 @@ public class LoginOrSignUpPageContoller {
     }
     @FXML
     public void switchToSignUp() throws IOException {
-        System.out.println("here");
+
         App.setRoot("signUpPage");
     }
 }
