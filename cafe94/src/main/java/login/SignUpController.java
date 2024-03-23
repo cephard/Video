@@ -25,16 +25,16 @@ public class SignUpController {
     @FXML
     public void switchToSignIn() throws IOException {
       //  if(passwordButton.getText().equals(passwordConfirmButton.getText())) {
-//            userData.add(firstNameButton.getText());
-//            userData.add(lastNameButton.getText());
-//            userData.add(gmailButton.getText());
-//            userData.add( addressButton.getText());
-//            userData.add(phoneNumberButton.getText());
-//            userData.add(passwordButton.getText());
-//            String pass = passwordConfirmButton.getText();
-        for(int i =0;i<6 ; i++) {
-            userData.add("Try1");
-        }
+            userData.add(firstNameButton.getText());
+            userData.add(lastNameButton.getText());
+            userData.add(gmailButton.getText());
+            userData.add( addressButton.getText());
+            userData.add(phoneNumberButton.getText());
+            userData.add(passwordButton.getText());
+            String pass = passwordConfirmButton.getText();
+//        for(int i =0;i<6 ; i++) {
+//            userData.add("Try2");
+//        }
             saveNewUserData(userData);
             App.setRoot("login");
 //        } else {
@@ -58,7 +58,7 @@ public class SignUpController {
             for (int i = 0; i < 6; i++) {
                 Cell cell = row.createCell(i);
                 cell.setCellValue(userData.get(i));
-                System.out.println("Excel file edited successfully.");
+                //System.out.println("Excel file edited successfully.");
             }
             FileOutputStream fileOutputStream = new FileOutputStream(filePath);
             workbook.write(fileOutputStream);
