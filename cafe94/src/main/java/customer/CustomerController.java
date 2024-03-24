@@ -1,7 +1,8 @@
-package self;
+package customer;
 
 import java.io.IOException;
 import javafx.fxml.FXML;
+import self.App;
 
 public class CustomerController {
 

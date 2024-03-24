@@ -1,4 +1,4 @@
-package self;
+package customer;
 
 public class DineInnController {
     
