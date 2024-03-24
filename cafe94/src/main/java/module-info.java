@@ -9,4 +9,8 @@ module self {
 
     opens login to javafx.fxml;
     exports login;
+    exports customer;
+    opens customer to javafx.fxml;
+    exports menu;
+    opens menu to javafx.fxml;
 }

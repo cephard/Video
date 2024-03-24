@@ -1,11 +1,9 @@
-package self;
-
-import java.io.IOException;
+package menu;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.text.Text;
+import self.App;
+
+import java.io.IOException;
 
 public class Menu {
 
