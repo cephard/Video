@@ -161,7 +161,7 @@
             </VBox>
             <VBox layoutX="606.0" layoutY="31.0" prefHeight="237.0" prefWidth="212.0">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="124.53668212890625">
+                  <Text fx:id="item6" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="124.53668212890625">
                      <font>
                         <Font size="20.0" />
                      </font>
