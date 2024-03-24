@@ -24,7 +24,7 @@ public class App extends Application {
     }
     @FXML
     private void switchToStaff() throws IOException {
-        App.setRoot("staff");
+        App.setRoot("menu");
     }
     @FXML
     private void switchToCustomer() throws IOException {
