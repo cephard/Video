@@ -5,73 +5,29 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.LinearGradient?>
-<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
+<?xml-stylesheet type="text/css" href="try.css" ?>
 
-<Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="499.0" prefWidth="663.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="self.App">
+<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="self.App">
    <children>
-      <AnchorPane layoutY="1.0">
+      <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="499.0" prefWidth="663.0" stylesheets="@try.css">
          <children>
-            <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="484.0" fitWidth="663.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" styleClass="pane">
                <image>
                   <Image url="@istockphoto-513592362-612x612.jpg" />
                </image>
             </ImageView>
-            <Button fx:id="staffButton" layoutX="128.0" layoutY="97.0" mnemonicParsing="false" onAction="#switchToStaff" prefHeight="75.0" prefWidth="146.0" text="Staff">
-               <textFill>
-                  <LinearGradient cycleMethod="REPEAT" endX="0.41287877433227765" endY="0.33333336403875635" startX="0.4128787869756872" startY="0.08712118322199042">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color red="1.0" />
-                           </color>
-                        </Stop>
-                        <Stop offset="0.006729475100942127">
-                           <color>
-                              <Color red="1.0" />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color red="0.031578946858644485" green="0.030877193436026573" blue="0.030877193436026573" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </LinearGradient>
-               </textFill>
+            <Button fx:id="staffButton" layoutX="158.0" layoutY="107.0" mnemonicParsing="false" onAction="#switchToStaff" prefHeight="75.0" prefWidth="146.0" text="Staff">
                <font>
                   <Font name="System Bold" size="22.0" />
                </font>
             </Button>
-            <Button fx:id="customerButton" layoutX="294.0" layoutY="97.0" mnemonicParsing="false" onAction="#switchToCustomer" prefHeight="75.0" prefWidth="146.0" text="Customer">
-               <textFill>
-                  <LinearGradient cycleMethod="REPEAT" endX="0.41287877433227765" endY="0.33333336403875635" startX="0.4128787869756872" startY="0.08712118322199042">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color red="1.0" />
-                           </color>
-                        </Stop>
-                        <Stop offset="0.006729475100942127">
-                           <color>
-                              <Color red="1.0" />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color red="0.031578946858644485" green="0.030877193436026573" blue="0.030877193436026573" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </LinearGradient>
-               </textFill>
+            <Button fx:id="customerButton" layoutX="345.0" layoutY="107.0" mnemonicParsing="false" onAction="#switchToCustomer" prefHeight="75.0" prefWidth="146.0" text="Customer">
                <font>
                   <Font name="System Bold" size="22.0" />
                </font>
             </Button>
          </children>
-      </AnchorPane>
+      </Pane>
    </children>
-</Pane>
+</AnchorPane>
