@@ -22,11 +22,12 @@ public class SignUpController {
     @FXML private Text displayPasswordStatus;
 
     ArrayList<String> userData = new ArrayList<>();
-    String pass = "success full ...plz LogIn";
+    String pass = "success full registered...plz LogIn";
     String fail = " Password doesn't match please try again..!!!";
 
     @FXML
     public void switchToSignIn() throws IOException {
+        String regID="";
         if(passwordButton.getText().equals(passwordConfirmButton.getText())) {
             userData.add("CafeMate000");
             userData.add(firstNameButton.getText());
@@ -36,9 +37,9 @@ public class SignUpController {
             userData.add(phoneNumberButton.getText());
             userData.add(passwordButton.getText());
 
-            saveNewUserData(userData);
-             displayPasswordStatus.setText(pass);
-            App.setRoot("login");
+            regID=saveNewUserData(userData);
+             displayPasswordStatus.setText(pass+"\nYour RegisterId is "+regID);
+           // App.setRoot("login");
         } else {
 
             displayPasswordStatus.setText(fail);
@@ -49,8 +50,9 @@ public class SignUpController {
 
     }
 //String fName, String lName,String gmail,String address, String pNo, String password
-    public static void saveNewUserData(ArrayList<String> userData)  {
+    public static String saveNewUserData(ArrayList<String> userData)  {
         String filePath = "C:/Users/kiran/Projects/Cafe94/cafe94/src/main/java/login/Data.xlsx";
+        String regID="";
         try {
             FileInputStream fileInputStream = new FileInputStream(new File(filePath));
             Workbook workbook = WorkbookFactory.create(fileInputStream);
@@ -60,7 +62,7 @@ public class SignUpController {
             //int l=0;
             Row row = sheet.createRow(r );
             Cell cell = row.createCell(0);
-            String regID = userData.get(0)+r+"";
+            regID = userData.get(0)+r+"";
             cell.setCellValue(regID);
             for (int i = 1; i < 7; i++) {
                  cell = row.createCell(i);
@@ -80,7 +82,10 @@ public class SignUpController {
 
         } catch (IOException  ex) {
             ex.printStackTrace();
+            return "unable to Register";
         }
+
+        return regID;
     }
     @FXML
     public void switchToLogin() throws IOException {

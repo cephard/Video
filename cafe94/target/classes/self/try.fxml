@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+        <?import javafx.scene.control.Menu?>
+        <?import javafx.scene.control.MenuBar?>
+        <?import javafx.scene.control.MenuItem?>
+        <?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" >
+<children>
+    <MenuBar prefHeight="25.0" prefWidth="600.0" styleClass="menu-bar">
+        <menus>
+            <Menu mnemonicParsing="false" text="File">
+                <items>
+                    <MenuItem mnemonicParsing="false" text="New" />
+                    <MenuItem mnemonicParsing="false" text="Open" />
+                    <MenuItem mnemonicParsing="false" text="Save" />
+                    <MenuItem mnemonicParsing="false" text="Exit" />
+                </items>
+            </Menu>
+            <!-- Add more menus and menu items as needed -->
+        </menus>
+    </MenuBar>
+</children>
+</AnchorPane>
