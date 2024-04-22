@@ -12,7 +12,7 @@ public class BasketLoader {
 
     ArrayList<String> itemName = new ArrayList<String>();
     ArrayList<Double> itemPrice = new ArrayList<Double>();
-    ArrayList<Integer> itemQunatity = new ArrayList<Integer>();
+    ArrayList<Integer> itemQuantity = new ArrayList<Integer>();
 
     public static String basketStatus(String userID)  {
         boolean flag = false;
@@ -47,7 +47,7 @@ public class BasketLoader {
     public void loadBasket(String userID, Basket basket) {
         getBasketItems(userID);
         for(int i=0;i<itemName.size(); i++) {
-            basket.addItem(itemName.get(i),itemPrice.get(i),itemQunatity.get(i),0.0,false);
+            basket.addItem(itemName.get(i),itemPrice.get(i), itemQuantity.get(i),0.0,false);
         }
     }
     public void getBasketItems(String userID) {
@@ -89,7 +89,7 @@ public class BasketLoader {
                     //Qunatity
                     row = sheet.getRow((r+2));
                     cell = row.getCell(c);
-                    itemQunatity.add((int) cell.getNumericCellValue());
+                    itemQuantity.add((int) cell.getNumericCellValue());
                     userStatus = false;
                 }
             }
