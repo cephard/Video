@@ -1,5 +1,5 @@
 /*This class is used to store Price, Quantity and Discount of the item */
-
+package basket;
 
 public class Data {
 

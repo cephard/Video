@@ -1,33 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 <?xml-stylesheet type="text/css" href="try.css" ?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="self.App">
+
+<AnchorPane prefHeight="645.0" prefWidth="782.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="self.App">
    <children>
-      <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="499.0" prefWidth="663.0" stylesheets="@try.css">
-         <children>
-            <ImageView fitHeight="484.0" fitWidth="663.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" styleClass="pane">
-               <image>
-                  <Image url="@istockphoto-513592362-612x612.jpg" />
-               </image>
-            </ImageView>
-            <Button fx:id="staffButton" layoutX="158.0" layoutY="107.0" mnemonicParsing="false" onAction="#switchToStaff" prefHeight="75.0" prefWidth="146.0" text="Staff">
-               <font>
-                  <Font name="System Bold" size="22.0" />
-               </font>
-            </Button>
-            <Button fx:id="customerButton" layoutX="345.0" layoutY="107.0" mnemonicParsing="false" onAction="#switchToCustomer" prefHeight="75.0" prefWidth="146.0" text="Customer">
-               <font>
-                  <Font name="System Bold" size="22.0" />
-               </font>
-            </Button>
-         </children>
-      </Pane>
+      <SplitPane dividerPositions="0.5" layoutX="-2.0" prefHeight="646.0" prefWidth="782.0" style="-fx-background-color: ligh black;">
+         <items>
+            <VBox prefHeight="645.0" prefWidth="429.0" style="-fx-background-color: grey;" />
+            <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="322.0" prefWidth="321.0">
+               <children>
+                  <Button fx:id="staffButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToStaff" prefHeight="29.0" prefWidth="108.0" text="Staff">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="50.0" />
+                     </VBox.margin>
+                     <textFill>
+                        <LinearGradient cycleMethod="REPEAT" endX="0.32954544822374976" endY="1.0" startX="0.3333333179806218">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.006729475100942127">
+                                 <color>
+                                    <Color red="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.031578946858644485" green="0.030877193436026573" blue="0.030877193436026573" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Button>
+                  <Button fx:id="customerButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToCustomer" prefHeight="46.0" prefWidth="138.0" text="Customer">
+                     <textFill>
+                        <LinearGradient cycleMethod="REPEAT" endX="0.32954544822374976" endY="1.0" startX="0.3333333179806218">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.006729475100942127">
+                                 <color>
+                                    <Color red="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.031578946858644485" green="0.030877193436026573" blue="0.030877193436026573" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </items>
+      </SplitPane>
    </children>
 </AnchorPane>

@@ -13,4 +13,7 @@ module self {
     opens customer to javafx.fxml;
     exports menu;
     opens menu to javafx.fxml;
+
+    opens basket to javafx.fxml;
+    exports basket;
 }

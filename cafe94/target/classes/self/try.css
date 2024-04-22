@@ -1,10 +1,17 @@
 /* styles.css */
 
 /* Pane Background */
-.pane {
+#pane {
     -fx-background-image: url('jetbrains://idea/navigate/reference?project=Cafe94&path=self/istockphoto-513592362-612x612.jpg'); /* Replace 'background.jpg' with your actual background image */
-    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-background-size: fill;
     -fx-background-repeat: repeat;
+
+}
+#borderPane {
+
+
+
 }
 
 /* Button Styles */

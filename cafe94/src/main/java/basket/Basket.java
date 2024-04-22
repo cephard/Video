@@ -1,14 +1,17 @@
+
+package basket;
+
 import java.util.ArrayList;
 
 public class Basket {
 
     private ArrayList<Item> items = new ArrayList<Item>();
-    
-    private int basketID;             //to store Basket ID
+    public BasketDataController tempBasket = new BasketDataController();
+    private String basketID;             //to store Basket ID
     private double voucher = 0.00;   //total voucher applied to Basket
     private Item itemsNPQD;         //items name price quantity discount
 
-    private static final String BASKET_INFO = "Basket %d has the following items:\n";
+    private static final String BASKET_INFO = "Basket %s has the following items:\n";
     private static final String VOUCHER_INFO = "Voucher applied: %.0f%%\n";
     private static final String TOTAL_INFO = "Total cost: %.2f pounds\n";
     private static final String EMPTY_INFO = "null";
@@ -16,13 +19,16 @@ public class Basket {
     private static final int HUNDRED = 100; 
     
    
-    public Basket(int basketID) {
+    public Basket(String basketID) {
        /*Constructor to assign  Price */
         this.basketID = basketID;
     }
 
+    public String getUserId() {
+        return basketID;
+    }
    
-    public Basket(int basketID, double voucher) {
+    public Basket(String basketID, double voucher) {
        /*Constructor to assign  Price and voucher */
       this.basketID = basketID;
       this.voucher = voucher;
@@ -39,13 +45,15 @@ public class Basket {
          
     }
 
-   
-    public void addItem(String name, double price, int quantity, double discount) {
-      /*addItem function works when name, price, qunatity and discount arguments are passed. 
-      Here it valids given (Price Qunatity and Discount) and 
-      creats Item class object and adding to array list */
-     
-      if (price>0.00 && quantity>0) {
+    /*addItem function works when name, price, qunatity and discount arguments are passed.
+       Here it valids given (Price Qunatity and Discount) and
+       creats Item class object and adding to array list */
+
+    public void addItem(String name, double price, int quantity, double discount, boolean tempLoader) {
+        if(tempLoader) {
+            tempBasket.setItemsData(basketID,name,price,quantity);
+        }
+
         if (findAnItem(name, price).equals(EMPTY_INFO)) {
           itemsNPQD = new Item(name, new Data(price, quantity, discount));
           items.add(itemsNPQD);
@@ -68,12 +76,38 @@ public class Basket {
                } 
              }
            }
-        }
+
       }
-    
-    
+    public void removeItem(String name, double price, int quantity ){
+        Item item;
+        for (int i=0; i<items.size(); i++) {
+            if (name.equalsIgnoreCase(items.get(i).getName()) && price==items.get(i).getPrice()) {
+                //text = items.get(i).getNameAndPrice();
+                if(items.get(i).getQuantity()>quantity) {
+                    item = new Item(name, new Data(price,items.get(i).getQuantity()-quantity,0.0));
+                    items.set(i, item);
+                }
+                else if(items.get(i).getQuantity()<=quantity) {
+                    System.out.println("here");
+                    items.remove(i);
+                }
+
+            }
+        }
+    }
+    public int findQantity(String name) {
+        if(items.isEmpty()) {
+            return 0;
+        }
+        for (int i=0; i<items.size(); i++) {
+            if (name.equalsIgnoreCase(items.get(i).getName())) {
+                return  items.get(i).getQuantity();
+            }
+        }
+        return 0;
+    }
     public double totalBasket() {
-      /*returning tooal price of all items including discount
+      /*returning total price of all items including discount
       price is received frm Data class */
       
      double sum=0.00;
@@ -126,6 +160,7 @@ public class Basket {
    }
 
  
+
    public String mostExpensiveItem() {
      /*Comparing price of all stored items and 
      returns expenseive item's name and price in string format

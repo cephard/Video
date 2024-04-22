@@ -9,18 +9,24 @@ import java.io.IOException;
 public class MenuDataController {
     //HashMap<String,Integer> itemsData = new HashMap<String,Integer>();
 
+    public String name;
+    public double price;
 
     public String getItemInfo(int rNum,int cNum,String item){
        // String itemInfo="Try " + n +" "+item;
 
-        return getItemsData(rNum,cNum,item);
-       // return itemInfo;
+         setItemsData(rNum,cNum,item);
+        return name;
     }
-    public double getItemPrice(String item) {
-        return 0.0;
+    public String getName() {
+        return name;
+    }
+    public double getPrice() {
+
+        return price;
     }
 
-    private String getItemsData(int rNum,int cNum, String item) {
+    public void setItemsData(int rNum,int cNum, String item) {
         String itemData="";
        // int value=0;
        // HashMap<String,Integer> itemsData = new HashMap<String,Integer>();
@@ -38,19 +44,19 @@ public class MenuDataController {
                 row = sheet.getRow(rNum);
                 cell = row.getCell(cNum);
                 itemData = cell.getStringCellValue();
-
+                this.name=cell.getStringCellValue();
                 row=sheet.getRow(rNum+1);
                 cell =row.getCell(cNum);
                        // value=Integer.parseInt(cell.getStringCellValue());
                        // itemsData.put(key,value);
                 itemData = itemData +"  "+ cell.getNumericCellValue();
-
+                this.price=cell.getNumericCellValue();
 
             fileInputStream.close();
             workbook.close();
         }catch (IOException  ex) {
             ex.printStackTrace();
         }
-        return itemData;
+      //  return itemData;
     }
 }

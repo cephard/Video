@@ -19,7 +19,10 @@ public class CustomerLoginController {
 //       return result;
 //    }
     public static String getUserName() {
-        return userData.get(1)+userData.get(2);
+        return userData.get(1)+" "+userData.get(2);
+    }
+    public static String getUserID(){
+        return userData.get(0);
     }
     public static boolean checkUserData(String regID,String password)  {
         boolean flag = false;
