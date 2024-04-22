@@ -37,7 +37,12 @@ public class BasketView {
         this.basketViewStage=stage;
     }
     public void itemsInBasket(Basket basket) {
-        basketView.setText(basket.toString());
+        if(basket.basketStatus()) {
+            basketView.setText("Basket is Empty \n Add items ");
+        } else {
+            basketView.setText(basket.toString());
+        }
+
     }
     @FXML
     public void switchToMenu() throws IOException {

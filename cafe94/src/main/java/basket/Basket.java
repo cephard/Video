@@ -159,7 +159,13 @@ public class Basket {
     return text;
    }
 
- 
+    public boolean basketStatus() {
+        if(items.isEmpty()) {
+            return true;
+        }else {
+            return false;
+        }
+    }
 
    public String mostExpensiveItem() {
      /*Comparing price of all stored items and 
