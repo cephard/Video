@@ -1,13 +1,14 @@
 package login;
 
+import data.DataManagement;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
-import org.apache.poi.ss.usermodel.*;
-import self.App;
 import javafx.scene.text.Text;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import self.App;
+
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -50,41 +51,29 @@ public class SignUpController {
 
     }
 //String fName, String lName,String gmail,String address, String pNo, String password
-    public static String saveNewUserData(ArrayList<String> userData)  {
-        String filePath = "C:/Users/kiran/Projects/Cafe94/cafe94/src/main/java/login/Data.xlsx";
+    public static String saveNewUserData(ArrayList<String> userData) throws IOException {
+
         String regID="";
-        try {
-            FileInputStream fileInputStream = new FileInputStream(new File(filePath));
-            Workbook workbook = WorkbookFactory.create(fileInputStream);
-            Sheet sheet = workbook.getSheet("UserData");
+        DataManagement getExcelData = new DataManagement();
 
-            int r = sheet.getLastRowNum() +1;
-            //int l=0;
-            Row row = sheet.createRow(r );
-            Cell cell = row.createCell(0);
-            regID = userData.get(0)+r+"";
-            cell.setCellValue(regID);
-            for (int i = 1; i < 7; i++) {
-                 cell = row.createCell(i);
-                cell.setCellValue(userData.get(i));
-                //System.out.println("Excel file edited successfully.");
-            }
-            FileOutputStream fileOutputStream = new FileOutputStream(filePath);
-            workbook.write(fileOutputStream);
+        Sheet sheet = getExcelData.getSheetData("UserData");
 
-            // Close streams
-            fileInputStream.close();
-            fileOutputStream.close();
-
-            workbook.close();
-
-            //  System.out.println("Excel file edited successfully.");
-
-        } catch (IOException  ex) {
-            ex.printStackTrace();
-            return "unable to Register";
+        int r = sheet.getLastRowNum() +1;
+        //int l=0;
+        Row row = sheet.createRow(r );
+        Cell cell = row.createCell(0);
+        regID = userData.get(0)+r+"";
+        cell.setCellValue(regID);
+        for (int i = 1; i < 7; i++) {
+             cell = row.createCell(i);
+            cell.setCellValue(userData.get(i));
+            //System.out.println("Excel file edited successfully.");
         }
 
+        // Close streams
+        getExcelData.closeExcel();
+
+        //  System.out.println("Excel file edited successfully.");
         return regID;
     }
     @FXML

@@ -1,9 +1,10 @@
 package menu;
 
-import org.apache.poi.ss.usermodel.*;
+import data.DataManagement;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 
 public class MenuDataController {
@@ -28,13 +29,11 @@ public class MenuDataController {
 
     public void setItemsData(int rNum,int cNum, String item) {
         String itemData="";
-       // int value=0;
-       // HashMap<String,Integer> itemsData = new HashMap<String,Integer>();
-        String filePath="C:/Users/kiran/Projects/Cafe94/cafe94/src/main/java/login/Data.xlsx";
+
         try {
-            FileInputStream fileInputStream = new FileInputStream(new File(filePath));
-            Workbook workbook = WorkbookFactory.create(fileInputStream);
-            Sheet sheet = workbook.getSheet("Food");
+            DataManagement getExcelData = new DataManagement();
+
+            Sheet sheet = getExcelData.getSheetData("Food");
 
             Row row;
             Cell cell;
@@ -52,8 +51,8 @@ public class MenuDataController {
                 itemData = itemData +"  "+ cell.getNumericCellValue();
                 this.price=cell.getNumericCellValue();
 
-            fileInputStream.close();
-            workbook.close();
+            getExcelData.closeFIS();
+            getExcelData.closeWorkBook();
         }catch (IOException  ex) {
             ex.printStackTrace();
         }

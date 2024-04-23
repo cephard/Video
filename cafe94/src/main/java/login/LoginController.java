@@ -18,6 +18,7 @@ public class LoginController {
     //@FXML private Label resultBox;
     @FXML private Text loginStatus;
     //static UserData data = new UserData();
+
     static CustomerLoginController data = new CustomerLoginController();
 
     private static final LoginController instance = new LoginController();
