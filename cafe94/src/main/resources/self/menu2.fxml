@@ -94,7 +94,7 @@
              <children>
                <Text fx:id="item9" strokeType="OUTSIDE" strokeWidth="0.0" />
             </children></StackPane>
-         <StackPane fx:id="stackPane10" alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="130.0" prefWidth="72.0" style="-fx-background-color: grey;" styleClass="stack-pane-hover" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <StackPane fx:id="stackPane10" alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: grey;" styleClass="stack-pane-hover" GridPane.columnIndex="1" GridPane.rowIndex="2">
              <GridPane.margin>
                  <Insets />
              </GridPane.margin>
