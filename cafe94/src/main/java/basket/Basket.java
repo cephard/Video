@@ -1,4 +1,6 @@
-
+/**
+ *
+ */
 package basket;
 
 import java.util.ArrayList;
@@ -27,9 +29,15 @@ public class Basket {
     public String getUserId() {
         return basketID;
     }
-   
+
+    /*Constructor to assign  Price and voucher */
+
+    /**
+     *
+     * @param basketID
+     * @param voucher
+     */
     public Basket(String basketID, double voucher) {
-       /*Constructor to assign  Price and voucher */
       this.basketID = basketID;
       this.voucher = voucher;
     }
@@ -189,7 +197,6 @@ public class Basket {
     }
 
 
-    
     @Override
     public String toString() {
       String text = "";

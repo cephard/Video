@@ -15,12 +15,11 @@ public class DataManagement {
     FileOutputStream fileOutputStream;
     Workbook workbook;
     Sheet sheet;
-    public final String filePath = "cafe94/src/main/java/data/Data.xlsx";
+    private static final String DATA_FILE_PATH = "cafe94/src/main/java/data/Data.xlsx";
 
     public  void setSheet(String sheetName) {
-        //String filePath = "C:/Users/kiran/Projects/Cafe94/cafe94/src/main/java/login/Data.xlsx";
         try{
-            this.fileInputStream = new FileInputStream(new File(this.filePath));
+            this.fileInputStream = new FileInputStream(new File(this.DATA_FILE_PATH));
             this.workbook = WorkbookFactory.create(this.fileInputStream);
             this.sheet = this.workbook.getSheet(sheetName);
         }catch (IOException ex){
@@ -35,7 +34,7 @@ public class DataManagement {
     }
     public void writing() throws IOException {
         try {
-            this.fileOutputStream = new FileOutputStream(this.filePath);
+            this.fileOutputStream = new FileOutputStream(this.DATA_FILE_PATH);
             workbook.write(this.fileOutputStream);
         } catch (IOException e) {
             throw new RuntimeException(e);

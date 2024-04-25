@@ -20,7 +20,6 @@ public class App extends Application {
     public void start(Stage stage) throws IOException {
 
         scene = new Scene(loadFXML("view"), 700, 480);
-
         stage.setTitle("Cafe94");
         stage.setScene(scene);
         stage.show();
@@ -28,7 +27,7 @@ public class App extends Application {
 
     @FXML
     private void switchToStaff() throws IOException {
-        App.setRoot("menu2");
+        App.setRoot("menu");
     }
 
     @FXML

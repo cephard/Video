@@ -1,82 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.LinearGradient?>
-<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
-<?xml-stylesheet type="text/css" href="try.css" ?>
+<?xml-stylesheet type="text/css" href="menucss.css" ?>
 
-
-<AnchorPane prefHeight="645.0" prefWidth="782.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="self.App">
-   <children>
-      <SplitPane dividerPositions="0.5" layoutX="-2.0" prefHeight="646.0" prefWidth="782.0" style="-fx-background-color: ligh black;">
-         <items>
-            <VBox prefHeight="645.0" prefWidth="429.0" style="-fx-background-color: grey;" />
-            <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="322.0" prefWidth="321.0">
-               <children>
-                  <Button fx:id="staffButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToStaff" prefHeight="29.0" prefWidth="108.0" text="Staff">
-                     <font>
-                        <Font name="System Bold" size="22.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets bottom="50.0" />
-                     </VBox.margin>
-                     <textFill>
-                        <LinearGradient cycleMethod="REPEAT" endX="0.32954544822374976" endY="1.0" startX="0.3333333179806218">
-                           <stops>
-                              <Stop>
-                                 <color>
-                                    <Color red="1.0" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="0.006729475100942127">
-                                 <color>
-                                    <Color red="1.0" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="1.0">
-                                 <color>
-                                    <Color red="0.031578946858644485" green="0.030877193436026573" blue="0.030877193436026573" />
-                                 </color>
-                              </Stop>
-                           </stops>
-                        </LinearGradient>
-                     </textFill>
-                  </Button>
-                  <Button fx:id="customerButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToCustomer" prefHeight="46.0" prefWidth="138.0" text="Customer">
-                     <textFill>
-                        <LinearGradient cycleMethod="REPEAT" endX="0.32954544822374976" endY="1.0" startX="0.3333333179806218">
-                           <stops>
-                              <Stop>
-                                 <color>
-                                    <Color red="1.0" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="0.006729475100942127">
-                                 <color>
-                                    <Color red="1.0" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="1.0">
-                                 <color>
-                                    <Color red="0.031578946858644485" green="0.030877193436026573" blue="0.030877193436026573" />
-                                 </color>
-                              </Stop>
-                           </stops>
-                        </LinearGradient>
-                     </textFill>
-                     <font>
-                        <Font name="System Bold" size="22.0" />
-                     </font>
-                  </Button>
-               </children>
-            </VBox>
-         </items>
-      </SplitPane>
-   </children>
-</AnchorPane>
+<BorderPane prefHeight="495.0" prefWidth="701.0" stylesheets="@menucss.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="self.App">
+   <center>
+      <VBox alignment="CENTER" spacing="100.0" VBox.vgrow="ALWAYS">
+         <children>
+            <!-- Staff Button -->
+            <Button fx:id="staffButton" mnemonicParsing="false" onAction="#switchToStaff" prefHeight="50.0" prefWidth="150.0" styleClass="main-button" text="Staff">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="customerButton" mnemonicParsing="false" onAction="#switchToCustomer" prefHeight="50.0" prefWidth="150.0" styleClass="main-button" text="Customer">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </center>
+   <left>
+      <StackPane fx:id="homeStackPane" prefHeight="495.0" prefWidth="376.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <StackPane prefHeight="495.0" prefWidth="60.0" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>

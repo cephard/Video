@@ -8,8 +8,6 @@ import org.apache.poi.ss.usermodel.Sheet;
 public class BasketDataController {
 
     public void setItemsData(String UserId,String item, double price, int quantity) {
-
-       // String filePath="cafe94/src/main/java/data/Data.xlsx";
         boolean userStatus = false;
         DataManagement getExcelData = new DataManagement();
         Sheet sheet = getExcelData.getSheetData("TempBasket");
