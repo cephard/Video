@@ -12,7 +12,7 @@ public class MenuDataController {
 
     public String name;
     public double price;
-
+    public String path;
     public String getItemInfo(int rNum,int cNum,String item){
        // String itemInfo="Try " + n +" "+item;
 
@@ -26,7 +26,10 @@ public class MenuDataController {
 
         return price;
     }
-
+    public String getItemPath() {
+        setItemPath(name);
+        return path;
+    }
     public void setItemsData(int rNum,int cNum, String item) {
         String itemData="";
 
@@ -57,5 +60,33 @@ public class MenuDataController {
             ex.printStackTrace();
         }
       //  return itemData;
+    }
+    public void setItemPath(String name) {
+        String itemData = "";
+
+        try {
+            DataManagement getExcelData = new DataManagement();
+
+            Sheet sheet = getExcelData.getSheetData("ImagePath");
+
+            Row row;
+            Cell cell;
+
+            // int r = sheet.getLastRowNum() ;
+                for(int i=1;i<=sheet.getLastRowNum();i++) {
+                    row= sheet.getRow(i);
+                    cell=row.getCell(0);
+                    if(cell.getStringCellValue().equals(name)) {
+                        cell=row.getCell(1);
+                        this.path= cell.getStringCellValue();
+                        break;
+                    }
+                }
+
+            getExcelData.closeFIS();
+            getExcelData.closeWorkBook();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
     }
 }

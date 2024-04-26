@@ -11,8 +11,8 @@
    <center>
       <VBox alignment="CENTER" spacing="100.0" VBox.vgrow="ALWAYS">
          <children>
-            <!-- Staff Button -->
-            <Button fx:id="staffButton" mnemonicParsing="false" onAction="#switchToStaff" prefHeight="50.0" prefWidth="150.0" styleClass="main-button" text="Staff">
+            <!-- staff Button -->
+            <Button fx:id="staffButton" mnemonicParsing="false" onAction="#switchToStaff" prefHeight="50.0" prefWidth="150.0" styleClass="main-button" text="staff">
                <font>
                   <Font name="Arial" size="18.0" />
                </font>

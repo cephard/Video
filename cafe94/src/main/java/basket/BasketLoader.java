@@ -95,9 +95,9 @@ public class BasketLoader {
 
             int r = FIRST_INDEX;
             int c= FIRST_INDEX;
-            for(int i = FIRST_INDEX; i<sheet.getLastRowNum(); i++) {
+            for(int i = 1; i<sheet.getLastRowNum(); i = i+3) {
                 row = sheet.getRow(i);
-                cell = row.getCell(FIRST_INDEX);
+                cell = row.getCell(0);
                 if (cell.getStringCellValue().equals(userID)) {
                     userStatus = true;
                     r=i;

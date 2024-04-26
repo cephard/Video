@@ -1,0 +1,5 @@
+Name,role,shift,ImagePath
+manager,manager,1,cafe94/src/main/resources/self/IMAGES/crossiant.png
+chef,chef,1,cafe94/src/main/resources/self/IMAGES/Avocado_Toast.png
+waiter,waiter,1,cafe94/src/main/resources/self/IMAGES/Caprese_Salad.png
+deliveryDriver,deliveryDriver,1,cafe94/src/main/resources/self/IMAGES/Grilled_Sandwich.png

@@ -18,7 +18,8 @@ public class BasketDataController {
         int r=0;
         int c=0;
 
-        for(int i=0;i<=sheet.getLastRowNum();i=i+3) {
+        for(int i=1;i<=sheet.getLastRowNum();i=i+3) {
+
             row = sheet.getRow(i);
             cell = row.getCell(0);
              if(cell.getStringCellValue().equals(UserId)) {

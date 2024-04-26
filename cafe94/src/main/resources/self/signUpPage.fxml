@@ -5,40 +5,126 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.SignUpController">
-   <children>
-      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: grey;">
+<BorderPane stylesheets="@menucss.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.SignUpController">
+   <center>
+      <GridPane alignment="CENTER" prefHeight="499.0" prefWidth="677.0" BorderPane.alignment="CENTER">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="247.0" minWidth="10.0" prefWidth="85.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="210.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="159.0" minWidth="10.0" prefWidth="96.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="211.0" minWidth="10.0" prefWidth="210.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="334.0" minWidth="10.0" prefWidth="91.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="34.0" minHeight="10.0" prefHeight="21.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="47.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="65.0" minHeight="10.0" prefHeight="65.0" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="34.0" minHeight="10.0" prefHeight="13.0" vgrow="SOMETIMES" />
+         </rowConstraints>
          <children>
-            <Label layoutX="37.0" layoutY="36.0" prefHeight="20.0" prefWidth="60.0" text="First Name" />
-            <Label layoutX="37.0" layoutY="95.0" prefHeight="20.0" prefWidth="60.0" text="DOB" />
-            <Label layoutX="37.0" layoutY="149.0" prefHeight="20.0" prefWidth="60.0" text="Gmail" />
-            <Label layoutX="226.0" layoutY="149.0" prefHeight="20.0" prefWidth="60.0" text="PhoneNumber" />
-            <Label layoutX="37.0" layoutY="262.0" prefHeight="20.0" prefWidth="92.0" text="ChoosePassword" />
-            <TextField fx:id="firstNameButton" layoutX="37.0" layoutY="56.0" promptText="FirstName " />
-            <TextField fx:id="gmailButton" layoutX="37.0" layoutY="169.0" promptText="ex :- user@cafe94.com" />
-            <TextField layoutX="233.0" layoutY="115.0" promptText="Date/Month/Year" />
-            <TextField fx:id="phoneNumberButton" layoutX="226.0" layoutY="169.0" promptText="+44 1234567890" />
-            <TextField fx:id="passwordButton" layoutX="37.0" layoutY="282.0" />
-            <Label layoutX="220.0" layoutY="36.0" prefHeight="20.0" prefWidth="60.0" text="Last Name" />
-            <TextField fx:id="lastNameButton" layoutX="212.0" layoutY="56.0" promptText="LastName" />
-            <TextField fx:id="addressButton" layoutX="37.0" layoutY="226.0" />
-            <Button fx:id="mainPageButton" layoutX="513.0" layoutY="361.0" mnemonicParsing="false" onAction="#switchToView" text="StartOver" />
-            <Label layoutX="37.0" layoutY="209.0" text="Address" />
-            <PasswordField fx:id="passwordConfirmButton" layoutX="37.0" layoutY="315.0" />
-            <DatePicker layoutX="37.0" layoutY="115.0" />
-            <Button fx:id="loginbutton" layoutX="440.0" layoutY="361.0" mnemonicParsing="false" onAction="#switchToLogin" text="Login" />
-            <Button fx:id="signUpSaveButton" layoutX="37.0" layoutY="349.0" mnemonicParsing="false" onAction="#switchToSignIn" text="SignUp" />
-            <Text fx:id="displayPasswordStatus" layoutX="196.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="207.20001220703125">
+            <Label prefHeight="21.0" prefWidth="161.0" text="First Name" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
-                  <Font size="25.0" />
-               </font>
-            </Text>
+                  <Font size="15.0" />
+               </font></Label>
+            <Label prefHeight="21.0" prefWidth="139.0" text="Date of Birth" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <Label prefHeight="20.0" prefWidth="60.0" text="Gmail" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <Label prefHeight="20.0" prefWidth="136.0" text="PhoneNumber" GridPane.columnIndex="3" GridPane.rowIndex="5">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <Label prefHeight="21.0" prefWidth="144.0" text="ChoosePassword" GridPane.columnIndex="1" GridPane.rowIndex="9">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <TextField fx:id="firstNameButton" promptText="FirstName " GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="15.0" />
+               </font></TextField>
+            <TextField fx:id="gmailButton" promptText="ex :- user@cafe94.com" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <font>
+                  <Font size="15.0" />
+               </font></TextField>
+            <TextField promptText="Date/Month/Year" GridPane.columnIndex="3" GridPane.rowIndex="4">
+               <font>
+                  <Font size="15.0" />
+               </font></TextField>
+            <TextField fx:id="phoneNumberButton" promptText="+44 1234567890" GridPane.columnIndex="3" GridPane.rowIndex="6">
+               <font>
+                  <Font size="15.0" />
+               </font></TextField>
+            <TextField fx:id="passwordButton" GridPane.columnIndex="1" GridPane.rowIndex="10">
+               <font>
+                  <Font size="15.0" />
+               </font></TextField>
+            <Label prefHeight="21.0" prefWidth="140.0" text="Last Name" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <TextField fx:id="lastNameButton" promptText="LastName" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <font>
+                  <Font size="15.0" />
+               </font></TextField>
+            <TextField fx:id="addressButton" GridPane.columnIndex="1" GridPane.rowIndex="8">
+               <font>
+                  <Font size="15.0" />
+               </font></TextField>
+            <Label text="Address" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <PasswordField fx:id="passwordConfirmButton" GridPane.columnIndex="1" GridPane.rowIndex="12">
+               <font>
+                  <Font size="15.0" />
+               </font></PasswordField>
+            <DatePicker prefHeight="30.0" prefWidth="213.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <HBox alignment="BOTTOM_LEFT" spacing="20.0" GridPane.columnIndex="3" GridPane.rowIndex="13">
+               <children>
+                  <Text fx:id="loginText" fill="#00a1ff" onMouseClicked="#switchToLogin" text="Log in!" underline="true">
+                  <font>
+                     <Font size="15.0" />
+                  </font>
+                  </Text>
+                  <Button fx:id="signUpSaveButton" mnemonicParsing="false" onAction="#switchToSignIn" text="SignUp" />
+               </children>
+            </HBox>
+            <VBox alignment="BOTTOM_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="13">
+               <children>
+                  <Button fx:id="mainPageButton" alignment="CENTER" mnemonicParsing="false" onAction="#switchToView" text="StartOver" />
+               </children>
+            </VBox>
+            <Label layoutX="56.0" layoutY="314.0" prefHeight="20.0" prefWidth="187.0" text="Retype  Password" GridPane.columnIndex="1" GridPane.rowIndex="11">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Already Have an account ?" wrappingWidth="196.13671875" GridPane.columnIndex="3" GridPane.rowIndex="12" />
          </children>
-      </Pane>
-   </children>
-</AnchorPane>
+         <Text fx:id="displayPasswordStatus" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+      </GridPane>
+   </center>
+</BorderPane>
