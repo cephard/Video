@@ -19,17 +19,16 @@ public class StaffDataController {
     private static final int HEADER = 0 ;
     private static final  int STAFF_ID = 1;
     private static final int FIRST_NAME =2;
-    private static final int CLOCKED_IN_FIRST_NAME = 0;
-    private static final int CLOCKED_IN_LAST_NAME = 1;
     private static final int LAST_NAME = 3;
     private static final int ROLE = 4;
     private static final int SHIFT = 5;
     private static final int IMAGE_PATH = 6;
+
     private static final int CLOCK_IN = 3;
     private static final int CLOCK_OUT = 4;
     private static final int DATE = 5;
     private static final double BASE_CLOCK_OUT_TIME = 0.0;
-    private  static  final String ENTRY_SEPARATOR = ",";
+
 
 
     /**
@@ -66,7 +65,7 @@ public class StaffDataController {
             reader.readLine();
 
             while ((entryLine = reader.readLine()) != null) {
-                String[] entryPart = entryLine.split(ENTRY_SEPARATOR);
+                String[] entryPart = entryLine.split(",");
                 int id = Integer.parseInt(entryPart[STAFF_ID]);
                 String firstName = entryPart[FIRST_NAME];
                 String lastName = entryPart[LAST_NAME];
@@ -91,13 +90,13 @@ public class StaffDataController {
     public static void updateClockIn(String attendanceSheetPath, Staff staffMember) throws IOException {
         List<String> entryLines = Files.readAllLines(Paths.get(attendanceSheetPath));
 
-        for (int i = CLOCKED_IN_LAST_NAME; i < entryLines.size(); i++) { // skipping header entryLine
+        for (int i = 1; i < entryLines.size(); i++) { // skipping header entryLine
             String entryLine = entryLines.get(i);
-            String[] entryPart = entryLine.split(ENTRY_SEPARATOR);
-            entryLines.set(i, String.join(ENTRY_SEPARATOR, entryPart));
+            String[] entryPart = entryLine.split(",");
+            entryLines.set(i, String.join(",", entryPart));
 
             //adding a new attendance if the user had already clocked out
-            if (!entryPart[CLOCK_OUT].equalsIgnoreCase(String.valueOf(BASE_CLOCK_OUT_TIME))){
+            if (!entryPart[CLOCK_OUT].equalsIgnoreCase(String.valueOf(0.0))){
                 addNewAttendance(entryLines, staffMember);
                 break;
             }
@@ -115,9 +114,9 @@ public class StaffDataController {
      */
     private static void updateClock(String[] entryPart, Staff staffMember) {
         entryPart[CLOCK_IN] = staffMember.getClockIn();
-        if (entryPart[CLOCK_IN].equalsIgnoreCase(String.valueOf(BASE_CLOCK_OUT_TIME))
-                && entryPart[CLOCK_OUT].equalsIgnoreCase(String.valueOf(BASE_CLOCK_OUT_TIME))) {
-            entryPart[CLOCK_OUT] = String.valueOf(BASE_CLOCK_OUT_TIME);
+        if (entryPart[CLOCK_IN].equalsIgnoreCase(String.valueOf(0.0))
+                && entryPart[CLOCK_OUT].equalsIgnoreCase(String.valueOf(0.0))) {
+            entryPart[CLOCK_OUT] = String.valueOf(0.0);
         } else {
             staffMember.setClockOut();
             entryPart[CLOCK_OUT] = staffMember.getClockOut();
@@ -134,14 +133,14 @@ public class StaffDataController {
      */
     public static void updateClockOut(String attendanceSheetPath, Staff staffMember) throws IOException {
         List<String> entryLines = Files.readAllLines(Paths.get(attendanceSheetPath));
-        for (int i = CLOCKED_IN_LAST_NAME; i < entryLines.size(); i++) { // skipping header line
+        for (int i = 1; i < entryLines.size(); i++) { // skipping header line
             String line = entryLines.get(i);
-            String[] entryParts = line.split(ENTRY_SEPARATOR);
-            if (entryParts[CLOCKED_IN_FIRST_NAME].equals(staffMember.getFirstName())
-                    && entryParts[CLOCKED_IN_LAST_NAME].equals(staffMember.getLastName())
-                    && entryParts[CLOCK_OUT].equalsIgnoreCase(String.valueOf(BASE_CLOCK_OUT_TIME))) {
+            String[] entryParts = line.split(",");
+            if (entryParts[0].equals(staffMember.getFirstName())
+                    && entryParts[1].equals(staffMember.getLastName())
+                    && entryParts[CLOCK_OUT].equalsIgnoreCase(String.valueOf(0.0))) {
                 updateClock(entryParts, staffMember);
-                entryLines.set(i, String.join(ENTRY_SEPARATOR, entryParts));
+                entryLines.set(i, String.join(",", entryParts));
                 break;
             }
         }
@@ -157,7 +156,7 @@ public class StaffDataController {
      * @param staffMember
      */
     private static void addNewAttendance(List<String> entryLines, Staff staffMember) {
-        String newSession = String.join(ENTRY_SEPARATOR, staffMember.getFirstName(), staffMember.getLastName(),staffMember.getRole(),  staffMember.getClockIn(), String.valueOf(BASE_CLOCK_OUT_TIME), staffMember.getDate());
+        String newSession = String.join(",", staffMember.getFirstName(), staffMember.getLastName(),staffMember.getRole(),  staffMember.getClockIn(), String.valueOf(0.0), staffMember.getDate());
         entryLines.add(newSession);
     }
 }

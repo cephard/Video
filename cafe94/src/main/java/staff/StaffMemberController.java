@@ -50,6 +50,9 @@ public class StaffMemberController {
      */
     @FXML
         public void initialize() {
+            imageView.setOnMouseClicked(event -> {
+               switchToDetails();
+            });
         staffMember = StaffController.getEmployeeFromStaffList();
             if (staffMember != null) {
                 nameText.setText(staffMember.getName());
@@ -77,12 +80,13 @@ public class StaffMemberController {
         App.setRoot("view");
     }
 
-
-    private void switchToManager() {
+    @FXML
+    private void switchToDetails() {
         try {
-            App.setRoot("Manager");
+            App.setRoot("staffDetails");
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
+
 }
