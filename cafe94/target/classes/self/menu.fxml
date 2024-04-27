@@ -283,4 +283,7 @@
             </padding>
         </SplitPane>
     </left>
+   <right>
+      <StackPane prefHeight="404.0" prefWidth="132.0" BorderPane.alignment="CENTER" />
+   </right>
 </BorderPane>
