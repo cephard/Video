@@ -66,6 +66,8 @@ public class SignUpController {
                 cell.setCellValue(userData.get(i));
                 //System.out.println("Excel file edited successfully.");
             }
+            cell = row.createCell(7);
+            cell.setCellValue("No");
             FileOutputStream fileOutputStream = new FileOutputStream(DATA_FILE_PATH);
             workbook.write(fileOutputStream);
 

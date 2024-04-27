@@ -5,6 +5,8 @@
 package staff;
 
 import basket.Order;
+import data.DataManagement;
+import org.apache.poi.ss.usermodel.Sheet;
 
 import java.util.ArrayList;
 
@@ -45,4 +47,11 @@ public class DeliveryDriver extends Employee {
         totalMillage += millage;
         return true; // Assuming the delivery is always successful
     }
+   public void deliveyStatus() {
+       DataManagement data = new DataManagement();
+        Sheet sheet= data.getSheetData("DeliveryOrders");
+
+
+
+   }
 }

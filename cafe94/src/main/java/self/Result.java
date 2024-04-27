@@ -22,18 +22,22 @@ public class Result {
      private Text displayUserName;
    // @FXML displayUserName.setText(data.getUserName());
    
+    public static String customerType="Ntn";
 
     LoginController data = LoginController.getInstance();
-@FXML
+    @FXML
    public void initialize() {
-//       displayUserName.setOnAction(e -> {
-//           changeName();
-//        });
-//       displayUserName.setText(userName);
-//       System.out.println("here       "+userName);
        displayUserName.setText(data.getUserName());
    }
 
+    private static final Result instance = new Result();
+    public static Result getInstance() {
+        return instance;
+    }
+
+    public String getCustomerType() {
+       return this.customerType;
+    }
    @FXML
     public  void setUserName(String userName){
         System.out.println("here 31      "+userName);
@@ -45,5 +49,31 @@ public class Result {
     private void switchToBrowsingPage() throws IOException {
         App.setRoot("menu");
     }
+    @FXML
+    public void switchToDineIn() throws IOException {
+        setCustomer("DineIn");
+        App.setRoot("menu");
+    }
 
+    @FXML
+    public void switchToTakeAway() throws IOException {
+        setCustomer("TakeAway");
+        App.setRoot("menu");
+    }
+    @FXML
+    public void switchToDelivery() throws IOException {
+        setCustomer("Delivery");
+        App.setRoot("menu");
+    }
+
+    public void setCustomer(String type) {
+    if(type.equals("DineIn")) {
+        this.customerType = type;
+
+    } else if (type.equals("TakeAway")) {
+        this.customerType = type;
+    }else {
+        this.customerType = type;
+    }
+    }
 }
