@@ -28,7 +28,8 @@ public class StaffDataController {
     private static final int CLOCK_OUT = 4;
     private static final int DATE = 5;
     private static final double BASE_CLOCK_OUT_TIME = 0.0;
-
+    private static final int ATTENDANCE_FIRST_NAME =0;
+    private static final int ATTENDANCE_LAST_NAME = 1;
 
 
     /**
@@ -90,7 +91,7 @@ public class StaffDataController {
     public static void updateClockIn(String attendanceSheetPath, Staff staffMember) throws IOException {
         List<String> entryLines = Files.readAllLines(Paths.get(attendanceSheetPath));
 
-        for (int i = 1; i < entryLines.size(); i++) { // skipping header entryLine
+        for (int i = STAFF_ID; i < entryLines.size(); i++) { // skipping header entryLine
             String entryLine = entryLines.get(i);
             String[] entryPart = entryLine.split(",");
             entryLines.set(i, String.join(",", entryPart));
@@ -133,15 +134,14 @@ public class StaffDataController {
      */
     public static void updateClockOut(String attendanceSheetPath, Staff staffMember) throws IOException {
         List<String> entryLines = Files.readAllLines(Paths.get(attendanceSheetPath));
-        for (int i = 1; i < entryLines.size(); i++) { // skipping header line
+        for (int i = STAFF_ID; i < entryLines.size(); i++) { // skipping header line
             String line = entryLines.get(i);
             String[] entryParts = line.split(",");
-            if (entryParts[0].equals(staffMember.getFirstName())
-                    && entryParts[1].equals(staffMember.getLastName())
+            if (entryParts[ATTENDANCE_FIRST_NAME].equals(staffMember.getFirstName())
+                    && entryParts[ATTENDANCE_LAST_NAME].equals(staffMember.getLastName())
                     && entryParts[CLOCK_OUT].equalsIgnoreCase(String.valueOf(0.0))) {
                 updateClock(entryParts, staffMember);
                 entryLines.set(i, String.join(",", entryParts));
-                break;
             }
         }
 
@@ -160,3 +160,4 @@ public class StaffDataController {
         entryLines.add(newSession);
     }
 }
+

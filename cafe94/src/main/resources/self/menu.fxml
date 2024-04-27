@@ -128,7 +128,7 @@
     </padding>
     <bottom>
         <HBox alignment="BOTTOM_RIGHT" fillHeight="false" prefHeight="39.0" prefWidth="476.0" spacing="20.0" BorderPane.alignment="CENTER">
-            <Button fx:id="backButton" onAction="#switchToView" styleClass="main-button" text="Back" />
+            <Button fx:id="backButton" onAction="#switchToWelcome" styleClass="main-button" text="Back" />
             <Button fx:id="basketButton" onAction="#switchToBasket" styleClass="main-button" text="Basket" />
          <Button fx:id="placeOrderButton" mnemonicParsing="false" onAction="#placeOrder" text="PlaceOrder" />
             <BorderPane.margin>

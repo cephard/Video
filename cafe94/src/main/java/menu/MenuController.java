@@ -100,6 +100,10 @@ public class MenuController {
         item6.setText(null);
     }
 
+    @FXML
+    public void switchToWelcome() throws IOException {
+        App.setRoot("passResult");
+    }
 
     @FXML
     private void switchToView() throws IOException {
