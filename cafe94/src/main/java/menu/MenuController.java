@@ -13,12 +13,14 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import login.LoginController;
 import self.App;
+import self.Result;
 
 import java.io.IOException;
 
 public class MenuController {
 
 
+    Result cTypeData = Result.getInstance();
     LoginController data = LoginController.getInstance();
     MenuDataController itemData = new MenuDataController();
     Basket basket = new Basket(data.getUserID(), 0);
@@ -27,6 +29,8 @@ public class MenuController {
     public void change(){
 
     }
+   // String customerType = cTypeData.getCustomerType();
+
     @FXML private Text item1;
     @FXML private Text item2;
     @FXML private Text item3;
@@ -42,7 +46,7 @@ public class MenuController {
     @FXML private Text userName;
     @FXML private TextArea showBasketItems;
     @FXML private Text showBasketItems2;
-
+    @FXML private Text customerType;
     public void initialize(){
         userName.setText(data.getUserName());
         //System.out.println(data.getUserID());
@@ -51,6 +55,7 @@ public class MenuController {
         } else {
             basketLoader.changeBasketStatus(data.getUserID(),"Yes");
         }
+        customerType.setText(cTypeData.getCustomerType());
     }
 
     //@FXML private Text item12;

@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane stylesheets="@menucss.css" fx:id="borderPane" minHeight="480.0" minWidth="743.0" prefHeight="547.0" prefWidth="743.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menu.MenuController">
+<BorderPane fx:id="borderPane" minHeight="480.0" minWidth="743.0" prefHeight="547.0" prefWidth="743.0" stylesheets="@menucss.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menu.MenuController">
     <center>
         <GridPane alignment="CENTER" hgap="2.0" prefHeight="430.0" prefWidth="539.0" style="-fx-background-color: black;" vgap="2.0" BorderPane.alignment="CENTER">
             <columnConstraints>
@@ -130,6 +130,7 @@
         <HBox alignment="BOTTOM_RIGHT" fillHeight="false" prefHeight="39.0" prefWidth="476.0" spacing="20.0" BorderPane.alignment="CENTER">
             <Button fx:id="backButton" onAction="#switchToView" styleClass="main-button" text="Back" />
             <Button fx:id="basketButton" onAction="#switchToBasket" styleClass="main-button" text="Basket" />
+         <Button fx:id="placeOrderButton" mnemonicParsing="false" onAction="#placeOrder" text="PlaceOrder" />
             <BorderPane.margin>
                 <Insets bottom="5.0" left="5.0" right="5.0" top="20.0" />
             </BorderPane.margin>
@@ -146,6 +147,7 @@
                         <Font name="System Bold" size="14.0" />
                     </font>
                 </Text>
+            <Text fx:id="customerType" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" StackPane.alignment="CENTER" />
             </children>
             <opaqueInsets>
                 <Insets left="50.0" />

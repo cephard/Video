@@ -216,7 +216,7 @@ public class BasketLoader {
         Cell cell;
         int currentRow= FIRST_INDEX;
         //int currentColumn= FIRST_INDEX;
-        for(int i = FIRST_INDEX; i<=sheet.getLastRowNum(); i=i+INCREMENT_INDEX_THRICE) {
+        for(int i = 1; i<=sheet.getLastRowNum(); i=i+INCREMENT_INDEX_THRICE) {
             row = sheet.getRow(i);
             cell = row.getCell(FIRST_INDEX);
             if(cell.getStringCellValue().equals(userID)) {
