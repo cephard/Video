@@ -24,6 +24,7 @@ public class SignUpController {
     ArrayList<String> userData = new ArrayList<>();
     String pass = "success full registered...plz LogIn";
     String fail = " Password doesn't match please try again..!!!";
+    private static final String DATA_FILE_PATH = "cafe94/src/main/java/data/Data.xlsx";
 
     @FXML
     public void switchToSignIn() throws IOException {
@@ -45,16 +46,12 @@ public class SignUpController {
             displayPasswordStatus.setText(fail);
            //App.setRoot("signUpPage");
         }
-
-
-
     }
 //String fName, String lName,String gmail,String address, String pNo, String password
     public static String saveNewUserData(ArrayList<String> userData)  {
-        String filePath = "C:/Users/kiran/Projects/Cafe94/cafe94/src/main/java/login/Data.xlsx";
         String regID="";
         try {
-            FileInputStream fileInputStream = new FileInputStream(new File(filePath));
+            FileInputStream fileInputStream = new FileInputStream(new File(DATA_FILE_PATH));
             Workbook workbook = WorkbookFactory.create(fileInputStream);
             Sheet sheet = workbook.getSheet("UserData");
 
@@ -69,7 +66,7 @@ public class SignUpController {
                 cell.setCellValue(userData.get(i));
                 //System.out.println("Excel file edited successfully.");
             }
-            FileOutputStream fileOutputStream = new FileOutputStream(filePath);
+            FileOutputStream fileOutputStream = new FileOutputStream(DATA_FILE_PATH);
             workbook.write(fileOutputStream);
 
             // Close streams

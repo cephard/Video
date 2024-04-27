@@ -1,34 +1,49 @@
 package self;
 
-import java.io.IOException;
-
 import javafx.fxml.FXML;
-import javafx.scene.input.MouseEvent;
+import javafx.scene.control.Button;
 import javafx.scene.text.Text;
 import login.LoginController;
 
+import java.io.IOException;
+
 public class Result {
 
-    
-     //LoginController data;
-   
-   @FXML private Text displayUserName;
+    @FXML
+    private Button dineIn;
+    @FXML
+    private Button takeAway;
+    @FXML
+    private Button delivery;
+    //LoginController data;
+     @FXML
+     private String userName;
+     @FXML
+     private Text displayUserName;
    // @FXML displayUserName.setText(data.getUserName());
    
+
+    LoginController data = LoginController.getInstance();
+@FXML
+   public void initialize() {
+//       displayUserName.setOnAction(e -> {
+//           changeName();
+//        });
+//       displayUserName.setText(userName);
+//       System.out.println("here       "+userName);
+       displayUserName.setText(data.getUserName());
+   }
+
    @FXML
-    // private void changeName() throws IOException {
-       
-       
-    
-    //     //displayUserName.setText(data.getUserName());
-    // }
-    private void changeName( MouseEvent event) {
-        //displayUserName.setText("User");
-        displayUserName.setText(LoginController.getUserName());
+    public  void setUserName(String userName){
+        System.out.println("here 31      "+userName);
+       this.userName=userName;
+       System.out.println("here 33      "+this.userName);
+       //initialize();
     }
-    
     @FXML
     private void switchToBrowsingPage() throws IOException {
         App.setRoot("menu");
     }
+
 }

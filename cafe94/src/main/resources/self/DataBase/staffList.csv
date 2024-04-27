@@ -1,0 +1,5 @@
+key, id, First Name,Last Name,role,shift,ImagePath
+manager,1,Jane,Doe,manager,8,cafe94/src/main/resources/self/IMAGES/manager.png
+chef,1,John,Doe,chef,8,cafe94/src/main/resources/self/IMAGES/chef.png
+waiter,1,Peter,Paul,waiter,8,cafe94/src/main/resources/self/IMAGES/waiter.png
+deliveryDriver,1,Marry,Ann,deliveryDriver,8,cafe94/src/main/resources/self/IMAGES/delivery.jpg

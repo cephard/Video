@@ -1,0 +1,265 @@
+/* Apply styles to the BorderPane */
+.border-pane {
+    background-color: white;
+}
+
+/* Apply styles to the ImageView */
+.image-view {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 0);
+}
+
+/* Apply styles to the GridPane */
+.border-pane {
+    -fx-background-color: white;
+}
+
+/* Apply styles to the Insets */
+.insets {
+    -fx-top: 20px;
+    -fx-right: 20px;
+    -fx-bottom: 20px;
+    -fx-left: 20px;
+}
+
+.image-view {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 0);
+    -fx-fit-width: 100%;
+    -fx-fit-height: 100%;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+
+/* Button Styles */
+.button {
+    -fx-font-size: 18px;
+    -fx-background-color:#FFA500;
+    -fx-text-fill: #FFFFFF;
+    -fx-background-radius: 7px;
+    -fx-font-family: "Helvetica Neu", Helvetica, Arial, sans-serif;
+}
+
+.button:hover {
+    -fx-background-color:#4682B4;
+}
+
+/* Style for TextField */
+.TextField {
+    -fx-background-color: #f2f2f2;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+    -fx-font-size: 14px;
+}
+
+/* Style for focused state */
+.TextField:focused {
+    -fx-border-color: #0078d4;
+    -fx-border-width: 2px;
+}
+
+#homeStackPane {
+    -fx-background-image: url('IMAGES/home.jpg');
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+}
+
+#stackPane1 {/*
+    -fx-background-image: url('IMAGES/crossiant.png');/* */
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: #FFE4C4; /* Bisque */
+}
+
+#stackPane2 {
+/*
+    -fx-background-image: url('IMAGES/Avocado_Toast.png');/* */
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: #90EE90; /* LightGreen */
+}
+
+#stackPane3 {
+    /*-fx-background-image: url('IMAGES/Caprese_Salad.png');/* */
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: #FFFACD; /* LemonChiffon */
+}
+
+#stackPane4 {
+    /*-fx-background-image: url('IMAGES/Grilled_Sandwich.png');/* */
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: #F5DEB3; /* Wheat */
+}
+
+#stackPane5 {
+    /*-fx-background-image: url('IMAGES/Blueberry_Muffin.png');/* */
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: #ADD8E6; /* LightBlue */
+}
+
+#stackPane6 {
+   /* -fx-background-image: url('IMAGES/Quinoa_Salad.png');/* */
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: #7FFFD4; /* Aquamarine */
+}
+
+#stackPane7 {
+   /* -fx-background-image: url('IMAGES/Veggie_Wrap.jpg');/* */
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: #F0E68C; /* Khaki */
+}
+
+#stackPane8 {/*
+    -fx-background-image: url('IMAGES/Broth_Bowl.png');/* */
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: #FFDAB9; /* PeachPuff */
+}
+
+#stackPane9 {
+/*
+    -fx-background-image: url('IMAGES/Chai_Latte.png');/* */
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: #D2B48C; /* Tan */
+}
+
+#stackPane10 {/*
+
+    -fx-background-image: url('IMAGES/Cream_Bagel.png');/* */
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: #FFA07A; /* LightSalmon */
+}
+
+#stackPane11 {/*
+    -fx-background-image: url('IMAGES/Fruit_Smoothie.png');/* */
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: #FFE4E1; /* MistyRose */
+}
+
+#stackPane12 {
+   /* -fx-background-image: url('IMAGES/Club_Sandwich.png');    /* */
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: #F0FFFF; /* Azure */
+}
+
+#waiterStackPane{
+    -fx-background-color: #F0FFFF; /* Azure */
+}
+
+#chefStackPane{
+    -fx-background-color: #FFE4E1; /* MistyRose */
+}
+
+#managerStackPane{
+    -fx-background-color: #FFA07A; /* LightSalmon */
+}
+
+
+#deliveryDriverStackPane{
+    -fx-background-color: #7FFFD4; /* Aquamarine */
+}
+
+#splitPane{
+-fx-background-image: url('Images/Split_Pane.jpg');
+}
+
+.stack-pane-hover:hover {
+    -fx-effect: dropshadow(gaussian, rgba(70, 130, 180, 0.5), 12, 0.5, 0, 0);
+    -fx-font-size: 1.3em;
+    -fx-font-weight: bold;
+    -fx-background-color: rgba(255, 255, 255, 0.5);
+}
+
+.stack-pane-hover{
+-fx-effect: dropshadow(gaussian, rgba(70, 130, 180, 0.5), 5, 0.5, 0, 0);
+-fx-background-color:#FFFFFF;
+}
+
+.blueberry-text {
+    -fx-font-family: "Arial", sans-serif;
+    -fx-font-size: 1.2em;
+    -fx-fill: #333;
+    -fx-stroke-type: outside;
+    -fx-font-weight: bold;
+    -fx-stroke-width: 0.0;
+    -fx-text-alignment: center;
+    -fx-wrap-text: true;
+}
+
+.menuitem-text {
+    -fx-font-family: "Arial", sans-serif;
+    -fx-font-size: 1.5em;
+    -fx-fill: #333;
+    -fx-stroke-type: outside;
+    -fx-font-weight: bold;
+    -fx-stroke-width: 0.0;
+    -fx-text-alignment: center;
+    -fx-wrap-text: true;
+}
+
+
+/* Style for ListView */
+.list-view {
+    -fx-control-inner-background: #f0f0f0;
+    -fx-font-size: 1.5em;
+}
+
+list-view .cell {
+    -fx-min-height: 100px;
+}
+
+.list-view .cell:even {
+    -fx-background-color: #ffffff;
+}
+
+.list-view .cell:odd {
+    -fx-background-color: #228B22;
+    -fx-text-fill: white;
+}
+
+#imageView {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 0);
+    -fx-fit-width: 100%;
+    -fx-fit-height: 100%;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #ccc;
+    -fx-border-width: 2px;
+    -fx-background-color: #f9f9f9;
+    -fx-transition: all 0.3s ease;
+}
+
+#image-view:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 10, 0, 0, 0); /* Hover effect */
+    -fx-border-color: #666;
+}
+
+.insets {
+    -fx-top: 20px;
+    -fx-right: 20px;
+    -fx-bottom: 20px;
+    -fx-left: 20px;
+}
+
+.splitPane:hover {
+    -fx-effect: dropshadow(gaussian, rgba(70, 130, 180, 0.5), 12, 0.5, 0, 0);
+    -fx-font-size: 1.3em;
+    -fx-font-weight: bold;
+    -fx-background-color:#4682B4;
+    -fx-text-fill: #FFFFFF;
+}
+
+.stack-pane-hover{
+-fx-effect: dropshadow(gaussian, rgba(70, 130, 180, 0.5), 5, 0.5, 0, 0);
+-fx-background-color:#FFFFFF;
+}
+

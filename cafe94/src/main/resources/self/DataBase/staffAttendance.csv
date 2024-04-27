@@ -1,0 +1,19 @@
+First Name,Last Name,role,Clock In Time, Clock Out Time, Date
+Jane,Doe,manager,00:14,00:14,2024-04-27
+John,Doe,chef,00:41,00:42,2024-04-27
+Peter,Paul,waiter,23:19,23:19,2024-04-26
+Marry,Ann,deliveryDriver,23:21,23:21,2024-04-26
+Jane,Doe,manager,00:39,00:39,2024-04-27
+Peter,Paul,waiter,00:40,00:41,2024-04-27
+John,Doe,chef,00:41,00.42,2024-04-27
+Marry,Ann,deliveryDriver,08:45,08:45,2024-04-27
+Jane,Doe,manager,08:45,08:45,2024-04-27
+Jane,Doe,manager,13:06,13:06,2024-04-27
+John,Doe,chef,13:17,13:17,2024-04-27
+Jane,Doe,manager,13:31,13:31,2024-04-27
+Jane,Doe,manager,13:55,13.58,2024-04-27
+Jane,Doe,manager,14:49,14:49,2024-04-27
+Jane,Doe,manager,15:25,15:25,2024-04-27
+Jane,Doe,manager,15:33,15:33,2024-04-27
+John,Doe,chef,15:37,0.0,2024-04-27
+Jane,Doe,manager,15:39,0.0,2024-04-27

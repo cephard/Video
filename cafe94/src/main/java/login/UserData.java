@@ -39,7 +39,4 @@ public class UserData {
         this.userName = userName;
         this.userPass = userPass;
     }
-  
-    
-
 }

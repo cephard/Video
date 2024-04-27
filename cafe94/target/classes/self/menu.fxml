@@ -1,210 +1,284 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menu.MenuController">
-   <children>
-      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="692.0" prefWidth="818.0" stylesheets="@try.css">
-         <children>
-            <Button fx:id="startAgainButton" layoutX="743.0" layoutY="660.0" mnemonicParsing="false" onAction="#switchToView" text="StartOver" />
-            <Label layoutX="6.0" layoutY="1.0" prefHeight="61.0" prefWidth="315.0" text="Label">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Button layoutX="650.0" layoutY="660.0" mnemonicParsing="false" text="PlaceOrder" />
-            <Text fx:id="basketButton" layoutX="540.0" layoutY="681.0" onMouseClicked="#showOrderList" strokeType="OUTSIDE" strokeWidth="0.0" text="Basket" wrappingWidth="86.13671875">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Text>
-            <Text fx:id="totalAmount" layoutX="454.0" layoutY="680.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total" wrappingWidth="86.13671875">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Text>
-            <VBox layoutX="6.0" layoutY="50.0" prefHeight="642.0" prefWidth="215.0" style="-fx-background-color: 555;">
-               <children>
-                  <Text fx:id="food1" onMouseClicked="#openHotDrink" strokeType="OUTSIDE" strokeWidth="0.0" text="Hot Drink" wrappingWidth="332.5367069244385">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets top="10.0" />
-                     </VBox.margin>
-                  </Text>
-                  <Text fx:id="food2" onMouseClicked="#openColdDrink" strokeType="OUTSIDE" strokeWidth="0.0" text="Cold Drink" wrappingWidth="332.5367069244385">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets top="10.0" />
-                     </VBox.margin>
-                  </Text>
-                  <Text fx:id="food3" onMouseClicked="#openDonuts" strokeType="OUTSIDE" strokeWidth="0.0" text="Donuts" wrappingWidth="332.5367069244385">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets top="10.0" />
-                     </VBox.margin>
-                  </Text>
-                  <Text fx:id="food4" onMouseClicked="#openWrap" strokeType="OUTSIDE" strokeWidth="0.0" text="Wrap" wrappingWidth="332.5367069244385">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets top="10.0" />
-                     </VBox.margin>
-                  </Text>
-                  <Text fx:id="food5" onMouseClicked="#openSandwiches" strokeType="OUTSIDE" strokeWidth="0.0" text="Sandwiches" wrappingWidth="332.5367069244385">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets top="10.0" />
-                     </VBox.margin>
-                  </Text>
-                  <Text fx:id="food6" onMouseClicked="#openBurgers" strokeType="OUTSIDE" strokeWidth="0.0" text="Burgers" wrappingWidth="332.5367069244385">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets top="10.0" />
-                     </VBox.margin>
-                  </Text>
-                  <Text fx:id="food7" onMouseClicked="#openChickenTenders" strokeType="OUTSIDE" strokeWidth="0.0" text="Chicken Tenders" wrappingWidth="332.5367069244385">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets top="10.0" />
-                     </VBox.margin>
-                  </Text>
-                  <Text fx:id="food8" onMouseClicked="#openSides" strokeType="OUTSIDE" strokeWidth="0.0" text="Sides" wrappingWidth="332.5367069244385">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets top="10.0" />
-                     </VBox.margin>
-                  </Text>
-                  <Text fx:id="food9" onMouseClicked="#openVegg" strokeType="OUTSIDE" strokeWidth="0.0" text="Vegan and Vegitarian" wrappingWidth="332.5367069244385">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets top="10.0" />
-                     </VBox.margin>
-                  </Text>
-                  <Text fx:id="food10" onMouseClicked="#openSpecialItems" strokeType="OUTSIDE" strokeWidth="0.0" text="Special Items" wrappingWidth="332.5367069244385">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets top="10.0" />
-                     </VBox.margin>
-                  </Text>
-               </children>
-            </VBox>
-            <AnchorPane layoutX="335.0" layoutY="49.0" />
-            <VBox layoutX="329.0" layoutY="34.0" prefHeight="239.0" prefWidth="249.0">
-               <children>
-                  <Text fx:id="item1" fontSmoothingType="LCD" onMouseClicked="#addItem1" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="238.13668823242188">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="5.0" top="5.0" />
-                     </VBox.margin>
-                  </Text>
-                  <Text fx:id="item2" onMouseClicked="#addItem2" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="242.936767578125">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="5.0" top="5.0" />
-                     </VBox.margin>
-                  </Text>
-                  <Text fx:id="item3" onMouseClicked="#addItem3" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="243.73672485351562">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="5.0" top="5.0" />
-                     </VBox.margin>
-                  </Text>
-                  <Text fx:id="item4" onMouseClicked="#addItem4" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="240.53671264648426">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="5.0" top="5.0" />
-                     </VBox.margin>
-                  </Text>
-                  <Text fx:id="item5" onMouseClicked="#addItem5" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="242.13674926757812">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="5.0" top="5.0" />
-                     </VBox.margin>
-                  </Text>
-               </children>
-            </VBox>
-            <VBox layoutX="606.0" layoutY="31.0" prefHeight="237.0" prefWidth="212.0">
-               <children>
-                  <Text fx:id="item6" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="124.53668212890625">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="5.0" top="5.0" />
-                     </VBox.margin>
-                  </Text>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="124.53668212890625">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="5.0" top="20.0" />
-                     </VBox.margin>
-                  </Text>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="124.53668212890625">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="5.0" top="20.0" />
-                     </VBox.margin>
-                  </Text>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="124.53668212890625">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="5.0" top="20.0" />
-                     </VBox.margin>
-                  </Text>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="124.53668212890625">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" top="20.0" />
-                     </VBox.margin>
-                  </Text>
-               </children>
-            </VBox>
-            <Text fx:id="showBasketItems2" layoutX="453.0" layoutY="412.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="174.93673706054688" />
-         </children>
-      </Pane>
-   </children>
-</AnchorPane>
+<BorderPane stylesheets="@menucss.css" fx:id="borderPane" minHeight="480.0" minWidth="743.0" prefHeight="547.0" prefWidth="743.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menu.MenuController">
+    <center>
+        <GridPane alignment="CENTER" hgap="2.0" prefHeight="430.0" prefWidth="539.0" style="-fx-background-color: black;" vgap="2.0" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="ALWAYS" minWidth="-Infinity" prefWidth="100.0" />
+                <ColumnConstraints hgrow="ALWAYS" minWidth="-Infinity" prefWidth="100.0" />
+                <ColumnConstraints hgrow="ALWAYS" minWidth="-Infinity" prefWidth="100.0" />
+                <ColumnConstraints hgrow="ALWAYS" minWidth="-Infinity" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="-Infinity" prefHeight="100.0" vgrow="ALWAYS" />
+                <RowConstraints minHeight="-Infinity" prefHeight="100.0" vgrow="ALWAYS" />
+                <RowConstraints minHeight="-Infinity" prefHeight="100.0" vgrow="ALWAYS" />
+                <RowConstraints maxHeight="70.0" minHeight="-Infinity" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <StackPane fx:id="stackPane1" alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#viewItem1" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: grey;" styleClass="stack-pane-hover">
+                <GridPane.margin>
+                    <Insets />
+                </GridPane.margin>
+                <children>
+                    <Text fx:id="item1" strokeType="OUTSIDE" strokeWidth="0.0" />
+                </children>
+            </StackPane>
+            <StackPane fx:id="stackPane2" alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#viewItem2" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: grey;" styleClass="stack-pane-hover" GridPane.columnIndex="1">
+                <GridPane.margin>
+                    <Insets />
+                </GridPane.margin>
+                <children>
+                    <Text fx:id="item2" strokeType="OUTSIDE" strokeWidth="0.0" />
+                </children></StackPane>
+            <StackPane fx:id="stackPane3" alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#viewItem3" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: grey;" styleClass="stack-pane-hover" GridPane.columnIndex="2">
+                <GridPane.margin>
+                    <Insets />
+                </GridPane.margin>
+                <children>
+                    <Text fx:id="item3" strokeType="OUTSIDE" strokeWidth="0.0" />
+                </children></StackPane>
+            <StackPane fx:id="stackPane4" alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#viewItem4" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: grey;" styleClass="stack-pane-hover" GridPane.columnIndex="3">
+                <GridPane.margin>
+                    <Insets />
+                </GridPane.margin>
+                <children>
+                    <Text fx:id="item4" strokeType="OUTSIDE" strokeWidth="0.0" />
+                </children></StackPane>
+            <StackPane fx:id="stackPane5" alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#viewItem5" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: grey;" styleClass="stack-pane-hover" GridPane.rowIndex="1">
+                <GridPane.margin>
+                    <Insets />
+                </GridPane.margin>
+                <children>
+                    <Text fx:id="item5" strokeType="OUTSIDE" strokeWidth="0.0" />
+                </children></StackPane>
+            <StackPane fx:id="stackPane6" alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: grey;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                <GridPane.margin>
+                    <Insets />
+                </GridPane.margin>
+                <children>
+                    <Text fx:id="item6" strokeType="OUTSIDE" strokeWidth="0.0" />
+                </children>
+            </StackPane>
+            <StackPane fx:id="stackPane7" alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: grey;" styleClass="stack-pane-hover" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                <GridPane.margin>
+                    <Insets />
+                </GridPane.margin>
+                <children>
+                    <Text fx:id="item7" strokeType="OUTSIDE" strokeWidth="0.0" />
+                </children></StackPane>
+            <StackPane fx:id="stackPane8" alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: grey;" styleClass="stack-pane-hover" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                <GridPane.margin>
+                    <Insets />
+                </GridPane.margin>
+                <children>
+                    <Text fx:id="item8" strokeType="OUTSIDE" strokeWidth="0.0" />
+                </children></StackPane>
+            <StackPane fx:id="stackPane9" alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: grey;" styleClass="stack-pane-hover" GridPane.rowIndex="2">
+                <GridPane.margin>
+                    <Insets />
+                </GridPane.margin>
+                <children>
+                    <Text fx:id="item9" strokeType="OUTSIDE" strokeWidth="0.0" />
+                </children></StackPane>
+            <StackPane fx:id="stackPane10" alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: grey;" styleClass="stack-pane-hover" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                <GridPane.margin>
+                    <Insets />
+                </GridPane.margin>
+                <children>
+                    <Text fx:id="item10" strokeType="OUTSIDE" strokeWidth="0.0" />
+                </children></StackPane>
+            <StackPane fx:id="stackPane11" alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: grey;" styleClass="stack-pane-hover" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                <GridPane.margin>
+                    <Insets />
+                </GridPane.margin>
+                <children>
+                    <Text fx:id="item11" strokeType="OUTSIDE" strokeWidth="0.0" />
+                </children></StackPane>
+            <StackPane fx:id="stackPane12" alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: grey;" styleClass="stack-pane-hover" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                <children>
+                    <Text fx:id="item12" strokeType="OUTSIDE" strokeWidth="0.0" />
+                </children>
+                <GridPane.margin>
+                    <Insets />
+                </GridPane.margin></StackPane>
+            <BorderPane.margin>
+                <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+            </BorderPane.margin>
+            <padding>
+                <Insets left="2.0" right="2.0" top="2.0" />
+            </padding>
+        </GridPane>
+    </center>
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+    <bottom>
+        <HBox alignment="BOTTOM_RIGHT" fillHeight="false" prefHeight="39.0" prefWidth="476.0" spacing="20.0" BorderPane.alignment="CENTER">
+            <Button fx:id="backButton" onAction="#switchToView" styleClass="main-button" text="Back" />
+            <Button fx:id="basketButton" onAction="#switchToBasket" styleClass="main-button" text="Basket" />
+            <BorderPane.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="20.0" />
+            </BorderPane.margin>
+        </HBox>
+    </bottom>
+    <top>
+        <StackPane alignment="CENTER_LEFT" prefHeight="37.0" prefWidth="833.0" BorderPane.alignment="CENTER">
+            <children>
+                <Text fx:id="userName" strokeType="OUTSIDE" strokeWidth="0.0" text="UserName" wrappingWidth="99.4765625">
+                    <StackPane.margin>
+                        <Insets left="10.0" />
+                    </StackPane.margin>
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Text>
+            </children>
+            <opaqueInsets>
+                <Insets left="50.0" />
+            </opaqueInsets>
+        </StackPane>
+    </top>
+    <left>
+        <SplitPane fx:id="splitPane" dividerPositions="1.5, 1.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="401.0" prefWidth="154.0" style="-fx-background-color: grey;">
+            <items>
+                <Label fx:id="food1" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="5.0" onMouseClicked="#openColdDrink" prefWidth="81.0" text="Cold Drinks" textAlignment="CENTER">
+                    <padding>
+                        <Insets bottom="15.0" top="15.0" />
+                    </padding>
+                    <styleClass>
+                        <String fx:value="splitPane" />
+                        <String fx:value="splitPane" />
+                    </styleClass>
+                    <font>
+                        <Font size="14.0" />
+                    </font></Label>
+                <Label fx:id="food2" alignment="CENTER" contentDisplay="TOP" graphicTextGap="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#openHotDrink" prefWidth="100.0" text="Hot Drinks" textAlignment="CENTER">
+                    <padding>
+                        <Insets bottom="15.0" top="15.0" />
+                    </padding>
+                    <styleClass>
+                        <String fx:value="splitPane" />
+                        <String fx:value="splitPane" />
+                    </styleClass>
+                    <font>
+                        <Font size="14.0" />
+                    </font></Label>
+                <Label fx:id="food3" alignment="CENTER" contentDisplay="TOP" graphicTextGap="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#openDonuts" prefWidth="100.0" text="Donuts" textAlignment="CENTER">
+                    <padding>
+                        <Insets bottom="15.0" top="15.0" />
+                    </padding>
+                    <styleClass>
+                        <String fx:value="splitPane" />
+                        <String fx:value="splitPane" />
+                    </styleClass>
+                    <font>
+                        <Font size="14.0" />
+                    </font></Label>
+                <Label fx:id="food4" alignment="CENTER" contentDisplay="TOP" graphicTextGap="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#openWrap" prefWidth="100.0" text="Wraps" textAlignment="CENTER">
+                    <padding>
+                        <Insets bottom="15.0" top="15.0" />
+                    </padding>
+                    <styleClass>
+                        <String fx:value="splitPane" />
+                        <String fx:value="splitPane" />
+                    </styleClass>
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="food5" alignment="CENTER" contentDisplay="TOP" graphicTextGap="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#openSandwiches" prefWidth="100.0" text="Sandwiches" textAlignment="CENTER">
+                    <padding>
+                        <Insets bottom="15.0" top="15.0" />
+                    </padding>
+                    <styleClass>
+                        <String fx:value="splitPane" />
+                        <String fx:value="splitPane" />
+                    </styleClass>
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="food6" alignment="CENTER" contentDisplay="TOP" graphicTextGap="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#openBurgers" prefWidth="100.0" text="Burgers" textAlignment="CENTER">
+                    <padding>
+                        <Insets bottom="15.0" top="15.0" />
+                    </padding>
+                    <styleClass>
+                        <String fx:value="splitPane" />
+                        <String fx:value="splitPane" />
+                    </styleClass>
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="food7" alignment="CENTER" contentDisplay="TOP" graphicTextGap="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#openChickenTenders" prefWidth="100.0" text="Chicken Tenders" textAlignment="CENTER">
+                    <padding>
+                        <Insets bottom="15.0" top="15.0" />
+                    </padding>
+                    <styleClass>
+                        <String fx:value="splitPane" />
+                        <String fx:value="splitPane" />
+                    </styleClass>
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="food8" alignment="CENTER" contentDisplay="TOP" graphicTextGap="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#openVegg" prefWidth="100.0" text="Vegetables" textAlignment="CENTER">
+                    <padding>
+                        <Insets bottom="15.0" top="15.0" />
+                    </padding>
+                    <styleClass>
+                        <String fx:value="splitPane" />
+                        <String fx:value="splitPane" />
+                    </styleClass>
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="food9" alignment="CENTER" contentDisplay="TOP" graphicTextGap="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#openSpecialItems" prefWidth="100.0" text="Special Items" textAlignment="CENTER">
+                    <padding>
+                        <Insets bottom="15.0" top="15.0" />
+                    </padding>
+                    <styleClass>
+                        <String fx:value="splitPane" />
+                        <String fx:value="splitPane" />
+                    </styleClass>
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="food10" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#openSides" prefWidth="138.0" text="Sides" textAlignment="CENTER">
+                    <padding>
+                        <Insets bottom="15.0" top="15.0" />
+                    </padding>
+                    <styleClass>
+                        <String fx:value="splitPane" />
+                        <String fx:value="splitPane" />
+                    </styleClass>
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+            </items>
+            <BorderPane.margin>
+                <Insets bottom="50.0" left="2.0" right="2.0" top="2.0" />
+            </BorderPane.margin>
+            <padding>
+                <Insets bottom="15.0" />
+            </padding>
+        </SplitPane>
+    </left>
+</BorderPane>

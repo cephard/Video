@@ -1,55 +1,101 @@
 package menu;
 
+import basket.Basket;
+import basket.BasketLoader;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.TextArea;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.text.Text;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import login.LoginController;
 import self.App;
 
 import java.io.IOException;
-import java.util.HashMap;
 
 public class MenuController {
+
+
+    LoginController data = LoginController.getInstance();
     MenuDataController itemData = new MenuDataController();
-    //String basket="";
-    HashMap<String,Integer> basket = new HashMap<String, Integer>();
+    Basket basket = new Basket(data.getUserID(), 0);
+    BasketLoader basketLoader = new BasketLoader();
+
+    public void change(){
+
+    }
     @FXML private Text item1;
     @FXML private Text item2;
     @FXML private Text item3;
     @FXML private Text item4;
     @FXML private Text item5;
     @FXML private Text item6;
-
+    @FXML private Text item7;
+    @FXML private Text item8;
+    @FXML private Text item9;
+    @FXML private Text item10;
+    @FXML private Text item11;
+    @FXML private Text item12;
+    @FXML private Text userName;
     @FXML private TextArea showBasketItems;
     @FXML private Text showBasketItems2;
-   public String[] items = new String[5];
+
+    public void initialize(){
+        userName.setText(data.getUserName());
+        //System.out.println(data.getUserID());
+        if(basketLoader.basketStatus(data.getUserID()).equals("Yes")){
+            basketLoader.loadBasket(data.getUserID(),basket);
+        } else {
+            basketLoader.changeBasketStatus(data.getUserID(),"Yes");
+        }
+    }
+
+    //@FXML private Text item12;
+    public String[] items = new String[5];
+    private BorderPane borderpane;
+    String item;
+    int rNum;
+
+
     public void setItems(int limit,int rNum,String item) {
         item1.setText(null);
         item2.setText(null);
         item3.setText(null);
         item4.setText(null);
         item5.setText(null);
+        this.rNum=rNum;
         if(limit>=1) {
+
             items[0] = itemData.getItemInfo(rNum,1, item);
             item1.setText(items[0]);
         }
         if(limit>=2) {
+
             items[1] = itemData.getItemInfo(rNum,2, item);
             item2.setText(items[1]);
         }
         if(limit>=3) {
+
             items[2] = itemData.getItemInfo(rNum,3, item);
             item3.setText(items[2]);
         }
         if(limit>=4) {
+
             items[3] = itemData.getItemInfo(rNum,4, item);
             item4.setText(items[3]);
         }
         if(limit>=5) {
+
             items[4] = itemData.getItemInfo(rNum,5, item);
             item5.setText(items[4]);
         }
         item6.setText(null);
     }
+
+
     @FXML
     private void switchToView() throws IOException {
         App.setRoot("view");
@@ -58,111 +104,137 @@ public class MenuController {
     private void openHotDrink() throws IOException {
         String item="HotDrinks";
         setItems(5,1,item);
-//        item1.setText(itemData.getItemInfo(1,item));
-//        item2.setText(itemData.getItemInfo(2,item));
-//        item3.setText(itemData.getItemInfo(3,item));
-//        item4.setText(itemData.getItemInfo(4,item));
-//        item5.setText(itemData.getItemInfo(5,item));
-        //App.setRoot("");
+
     }
     @FXML
     private void openColdDrink() throws IOException {
-        String item="ColdDrinks";
+         item="ColdDrinks";
         setItems(5,3,item);
     }
     @FXML
     private void openDonuts() throws IOException {
-        String item="Donuts";
+         item="Donuts";
         setItems(5,5,item);
     }
     @FXML
     private void openWrap() throws IOException {
-        String item="Wrap";
+         item="Wrap";
         setItems(4,7,item);
     }
     @FXML
     private void openSandwiches() throws IOException {
-        String item="Sandwiches";
+         item="Sandwiches";
         setItems(2,9,item);
     }
     @FXML
     private void openBurgers() throws IOException {
-        String item="Burgers";
+         item="Burgers";
         setItems(3,11,item);
     }
     @FXML
     private void openChickenTenders() throws IOException {
-        String item="ChickenTenders";
+         item="ChickenTenders";
         setItems(3,13,item);
     }
     @FXML
     private void openSides() throws IOException {
-        String item="Sides";
+         item="Sides";
         setItems(2,15,item);
     }
     @FXML
     private void openVegg() throws IOException {
-        String item="Vegg";
+         item="Vegg";
         setItems(2,17,item);
     }
     @FXML
     private void openSpecialItems() throws IOException {
-        String item="SpecialItems";
+         item="SpecialItems";
         setItems(1,19,item);
     }
-    @FXML
-    private void addItem1() throws IOException {
-        addToBasket(items[0]);
-        //basket+=items[0] + "\n";
-    }
-    @FXML
-    private void addItem2() throws IOException {
-        addToBasket(items[1]);
-        //basket+=items[1] + "\n";
-    }
-    @FXML
-    private void addItem3() throws IOException {
-        addToBasket(items[2]);
-        //basket+=items[2] + "\n";
-    }
-    @FXML
-    private void addItem4() throws IOException {
-        addToBasket(items[3]);
-        //basket+=items[3] + "\n";
-    }
-    @FXML
-    private void addItem5() throws IOException {
-        addToBasket(items[4]);
-        //basket+=items[4] + "\n";
-    }
 
-    @FXML
-    private void showOrderList() throws IOException {
-
-        //showBasketItems.setText(basket);
-        showBasketItems2.setText(getBasket());
-
-    }
-//    @FXML
-//    private void viewFresh() throws IOException{
-//        App.setRoot("menu");
-//    }
-    public void addToBasket(String item) {
-
-        if (item != null) {
-            item = "\n" + item;
-            if (basket.isEmpty()) {
-                basket.put(item, 1);
-            } else if (basket.containsKey(item)) {
-                basket.replace(item, 1 + basket.get(item));
-            } else {
-                basket.put(item, 1);
-            }
+    private void setView(Text itemText,int cNum) throws IOException {
+        if(itemText.getText().isEmpty()) {
+            App.setRoot("menu2");
+        } else {
+            itemData.setItemsData(rNum,cNum,this.item);
+           // viewItemDetails.setItemDetails(itemData);
+           editItem(itemData);
+          // App.setRoot("sub");
         }
     }
+    @FXML
+    private void viewItem1() throws IOException {
+        setView(item1,1);
+    }
+
+    @FXML
+    private void viewItem2() throws IOException {
+        setView(item2,2);
+    }
+    @FXML
+    private void viewItem3() throws IOException {
+        setView(item3,3);
+    }
+    @FXML
+    private void viewItem4() throws IOException {
+        setView(item4,4);
+    }
+    @FXML
+    private void viewItem5() throws IOException {
+        setView(item5,5);
+    }
+
+    private void viewItem6() throws IOException {
+    }private void viewItem7() throws IOException {
+    } private void viewItem8() throws IOException {
+    } private void viewItem9() throws IOException {
+    } private void viewItem10() throws IOException {
+    } private void viewItem11() throws IOException {
+    }private void viewItem12() throws IOException {
+    }
+
+
     public String getBasket() {
-
-
         return basket.toString();
     }
+    @FXML
+    private void switchToBasket() throws IOException {
+
+        FXMLLoader loader = new FXMLLoader(App.class.getResource("basketView.fxml"));
+        Parent root = loader.load();
+        BasketView controller = loader.getController();
+        controller.itemsInBasket(basket);
+
+
+        Stage basketViewStage = new Stage();
+        controller.setStage(basketViewStage);
+        basketViewStage.setTitle("Basket View");
+        basketViewStage.setScene(new Scene(root, 450, 450));
+        basketViewStage.initModality(Modality.APPLICATION_MODAL);
+        basketViewStage.showAndWait();
+    }
+    @FXML
+    private void placeOrder() {
+        basketLoader.storeOrder(basket.getUserId(),basket.toString());
+        basketLoader.changeBasketStatus(basket.getUserId(),"No");
+        basketLoader.deleteTempBasket(basket.getUserId());
+    }
+    private void editItem(MenuDataController itemData) throws IOException {
+
+        FXMLLoader loader = new FXMLLoader(App.class.getResource("sub.fxml"));
+        Parent root = loader.load();
+        BasketController controller = loader.getController();
+        controller.setItemDetails(itemData,basket);
+
+
+        Stage orderTypeStage = new Stage();
+        controller.setStage(orderTypeStage);
+        orderTypeStage.setTitle("Edit Item Detail");
+        orderTypeStage.setScene(new Scene(root, 450, 450));
+        orderTypeStage.initModality(Modality.APPLICATION_MODAL);
+        orderTypeStage.showAndWait();
+      //  refreshOrderItemList();
+    }
+
+
 }
