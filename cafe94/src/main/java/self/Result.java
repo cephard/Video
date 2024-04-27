@@ -1,6 +1,7 @@
 package self;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.text.Text;
 import login.LoginController;
 
@@ -8,10 +9,17 @@ import java.io.IOException;
 
 public class Result {
 
-
-     //LoginController data;
-     public String userName;
-   @FXML private Text displayUserName;
+    @FXML
+    private Button dineIn;
+    @FXML
+    private Button takeAway;
+    @FXML
+    private Button delivery;
+    //LoginController data;
+     @FXML
+     private String userName;
+     @FXML
+     private Text displayUserName;
    // @FXML displayUserName.setText(data.getUserName());
    
 
@@ -37,4 +45,5 @@ public class Result {
     private void switchToBrowsingPage() throws IOException {
         App.setRoot("menu");
     }
+
 }

@@ -58,77 +58,115 @@
     -fx-border-width: 2px;
 }
 
-#homeStackPane{
--fx-background-image: url('IMAGES/home.jpg');
+#homeStackPane {
+    -fx-background-image: url('IMAGES/home.jpg');
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
 }
-#stackPane1 {
-    -fx-background-image: url('IMAGES/crossiant.png');
+
+#stackPane1 {/*
+    -fx-background-image: url('IMAGES/crossiant.png');/* */
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
-    }
+    -fx-background-color: #FFE4C4; /* Bisque */
+}
+
 #stackPane2 {
-    -fx-background-image: url('IMAGES/Avocado_Toast.png');
+/*
+    -fx-background-image: url('IMAGES/Avocado_Toast.png');/* */
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
-    }
+    -fx-background-color: #90EE90; /* LightGreen */
+}
+
 #stackPane3 {
-    -fx-background-image: url('IMAGES/Caprese_Salad.png');
+    /*-fx-background-image: url('IMAGES/Caprese_Salad.png');/* */
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
-    }
+    -fx-background-color: #FFFACD; /* LemonChiffon */
+}
+
 #stackPane4 {
-    -fx-background-image: url('IMAGES/Grilled_Sandwich.png');
+    /*-fx-background-image: url('IMAGES/Grilled_Sandwich.png');/* */
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
-    }
+    -fx-background-color: #F5DEB3; /* Wheat */
+}
 
 #stackPane5 {
-    -fx-background-image: url('IMAGES/Blueberry_Muffin.png');
+    /*-fx-background-image: url('IMAGES/Blueberry_Muffin.png');/* */
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
-    }
+    -fx-background-color: #ADD8E6; /* LightBlue */
+}
 
 #stackPane6 {
-    -fx-background-image: url('IMAGES/Quinoa_Salad.png');
+   /* -fx-background-image: url('IMAGES/Quinoa_Salad.png');/* */
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
-    }
-#stackPane7 {
-    -fx-background-image: url('IMAGES/Veggie_Wrap.jpg');
-    -fx-background-size: cover;
-    -fx-background-repeat: no-repeat;
-    }
+    -fx-background-color: #7FFFD4; /* Aquamarine */
+}
 
-#stackPane8 {
-    -fx-background-image: url('IMAGES/Broth_Bowl.png');
+#stackPane7 {
+   /* -fx-background-image: url('IMAGES/Veggie_Wrap.jpg');/* */
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
-    }
+    -fx-background-color: #F0E68C; /* Khaki */
+}
+
+#stackPane8 {/*
+    -fx-background-image: url('IMAGES/Broth_Bowl.png');/* */
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: #FFDAB9; /* PeachPuff */
+}
 
 #stackPane9 {
-    -fx-background-image: url('IMAGES/Chai_Latte.png');
+/*
+    -fx-background-image: url('IMAGES/Chai_Latte.png');/* */
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
-    }
-#stackPane10 {
-    -fx-background-image: url('IMAGES/Cream_Bagel.png');
-    -fx-background-size: cover;
-    -fx-background-repeat: no-repeat;
-    }
+    -fx-background-color: #D2B48C; /* Tan */
+}
 
-#stackPane11 {
-    -fx-background-image: url('IMAGES/Fruit_Smoothie.png');
+#stackPane10 {/*
+
+    -fx-background-image: url('IMAGES/Cream_Bagel.png');/* */
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
-    }
+    -fx-background-color: #FFA07A; /* LightSalmon */
+}
+
+#stackPane11 {/*
+    -fx-background-image: url('IMAGES/Fruit_Smoothie.png');/* */
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: #FFE4E1; /* MistyRose */
+}
 
 #stackPane12 {
-    -fx-background-image: url('IMAGES/Club_Sandwich.png');
+   /* -fx-background-image: url('IMAGES/Club_Sandwich.png');    /* */
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
-    }
+    -fx-background-color: #F0FFFF; /* Azure */
+}
+
+#waiterStackPane{
+    -fx-background-color: #F0FFFF; /* Azure */
+}
+
+#chefStackPane{
+    -fx-background-color: #FFE4E1; /* MistyRose */
+}
+
+#managerStackPane{
+    -fx-background-color: #FFA07A; /* LightSalmon */
+}
+
+
+#deliveryDriverStackPane{
+    -fx-background-color: #7FFFD4; /* Aquamarine */
+}
 
 #splitPane{
 -fx-background-image: url('Images/Split_Pane.jpg');

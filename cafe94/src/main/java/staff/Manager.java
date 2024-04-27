@@ -3,11 +3,10 @@ package staff;
 import java.util.ArrayList;
 
 public class Manager extends Staff {
-
     private ArrayList<StaffDataController> staffCover;
 
-    public Manager(int id, String firstName, String lastName, String role) {
-        super(id, firstName, lastName, role);
+    public Manager(int id, String firstName, String lastName, String role,int shift,String imagePath) {
+        super(id, firstName, lastName, role,shift,imagePath);
         this.staffCover = new ArrayList<>();
     }
 

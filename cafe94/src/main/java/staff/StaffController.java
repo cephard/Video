@@ -7,13 +7,14 @@ import javafx.scene.layout.StackPane;
 import self.App;
 
 import java.io.IOException;
+import java.time.LocalTime;
 import java.util.Map;
 
 public class StaffController extends StaffDataController {
     @FXML
     //protected static Order order = new Order(2334);
-    private static StaffMember selectedStaffMember;
-    Map<String, StaffMember> staffMembersMap;
+    private static Staff selectedStaffMember;
+    Map<String, Staff> staffMemberList;
     @FXML
     private Button backButton;
     @FXML
@@ -26,9 +27,13 @@ public class StaffController extends StaffDataController {
     private StackPane waiterStackPane;
     @FXML
     private StackPane deliveryDriverStackPane;
+
+    LocalTime currentTime = LocalTime.now();
+
+
     {
         try {
-            staffMembersMap = loadMenuFromCSV("cafe94/src/main/resources/self/DataBase/staffList.csv");
+            staffMemberList = loadStaffDetails("cafe94/src/main/resources/self/DataBase/staffList.csv");
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -40,36 +45,39 @@ public class StaffController extends StaffDataController {
      * @Ceph
      */
 
-    public static StaffMember getItemFromMenu() {
+    public static Staff getEmployeeFromStaffList() {
         return selectedStaffMember;
     }
 
     public void initialize() {
         managerStackPane.setOnMouseClicked(event -> {
-            handleStackPaneClick(staffMembersMap.get("manager"));
+            handleStackPaneClick(staffMemberList.get("manager"));
         });
         chefStackPane.setOnMouseClicked(event -> {
-            handleStackPaneClick(staffMembersMap.get("chef"));
+            handleStackPaneClick(staffMemberList.get("chef"));
         });
         waiterStackPane.setOnMouseClicked(event -> {
-            handleStackPaneClick(staffMembersMap.get("waiter"));
+            handleStackPaneClick(staffMemberList.get("waiter"));
         });
         deliveryDriverStackPane.setOnMouseClicked(event -> {
-            handleStackPaneClick(staffMembersMap.get("deliveryDriver"));
+            handleStackPaneClick(staffMemberList.get("deliveryDriver"));
         });
     }
 
     /**
-     *
+     * Opens new Scene with staff member details
      * @param staffMember
      */
-    private void handleStackPaneClick(StaffMember staffMember) {
+    private void handleStackPaneClick(Staff staffMember) {
+        String attendanceSheet = "cafe94/src/main/resources/self/DataBase/staffAttendance.csv";
         selectedStaffMember = staffMember;
-        if (staffMember.getRole().equals("manager")) {
-            switchToManager();
-        } else {
-            switchToStaffMember();
+        selectedStaffMember.clockIn(currentTime);
+        try {
+            updateClockIn(attendanceSheet,selectedStaffMember);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
+        switchToStaffMember();
     }
 
     /**
@@ -83,21 +91,16 @@ public class StaffController extends StaffDataController {
         }
     }
 
-    private void switchToManager() {
-        try {
-            App.setRoot("Manager");
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
     @FXML
     private void switchToView() throws IOException {
         App.setRoot("view");
     }
 
-    @FXML
-    private void switchToOrder() throws IOException {
-        App.setRoot("order");
+    /**
+     * method to access the selected staff member
+     * @return
+     */
+    public static Staff getSelectedStaffMember() {
+        return selectedStaffMember;
     }
 }
