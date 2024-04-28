@@ -15,7 +15,7 @@ public class DataManagement {
     FileOutputStream fileOutputStream;
     Workbook workbook;
     Sheet sheet;
-    private static final String DATA_FILE_PATH = "cafe94/src/main/java/data/Data.xlsx";
+    private  final String DATA_FILE_PATH = "cafe94/src/main/java/data/Data.xlsx";
 
     public  void setSheet(String sheetName) {
         try{

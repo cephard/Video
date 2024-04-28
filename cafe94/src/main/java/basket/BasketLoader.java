@@ -327,4 +327,24 @@ public class BasketLoader {
         getExcelData.closeExcel();
     }
 
+    public ArrayList<String> getOrderHistory(String userID) {
+        ArrayList<String> orders = null;
+        this.sheet = getExcelData.getSheetData("OrderHistory");
+        Row row;
+        Cell cell;
+        for (int i = 1; i <= sheet.getLastRowNum(); i++) {
+            row = sheet.getRow(i);
+            cell = row.getCell(0);
+            if (cell.getStringCellValue().equals(userID)) {
+
+                for(int j=1;j<=row.getLastCellNum();j++) {
+                    cell=row.getCell(1);
+                    orders.add(cell.getStringCellValue());
+                }
+                break;
+            }
+
+        }
+        return orders;
+    }
 }

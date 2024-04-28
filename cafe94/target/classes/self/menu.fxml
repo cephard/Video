@@ -296,7 +296,7 @@
                               <Font size="18.0" />
                            </font>
                         </Text>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="OrderHistory">
+                        <Text fx:id="orderHistory" onMouseClicked="#openOrderHistory" strokeType="OUTSIDE" strokeWidth="0.0" text="OrderHistory">
                            <font>
                               <Font size="18.0" />
                            </font>

@@ -271,5 +271,19 @@ public class MenuController {
       //  refreshOrderItemList();
     }
 
+    public void openOrderHistory() throws IOException {
+        FXMLLoader loader = new FXMLLoader(App.class.getResource("orderHistory.fxml"));
+        Parent root = loader.load();
+        OrderHistory controller = loader.getController();
+        controller.itemsInBasket(basket.getUserId());
+
+
+        Stage orderViewStage = new Stage();
+        controller.setStage(orderViewStage);
+        orderViewStage.setTitle("Order History");
+        orderViewStage.setScene(new Scene(root, 500, 500));
+        orderViewStage.initModality(Modality.APPLICATION_MODAL);
+        orderViewStage.showAndWait();
+    }
 
 }
