@@ -76,25 +76,25 @@
             <RowConstraints minHeight="-Infinity" prefHeight="100.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <StackPane fx:id="stackPane1" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0" styleClass="stack-pane-hover">
+            <StackPane fx:id="mainDuty" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0" styleClass="stack-pane-hover">
                <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="58.0" prefWidth="79.0" text="First Role" textAlignment="CENTER" />
+                  <Label fx:id = "firstRole" alignment="CENTER" contentDisplay="CENTER" prefHeight="58.0" prefWidth="79.0" text="Hire Staff" textAlignment="CENTER" />
                </children>
                <GridPane.margin>
                   <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
                </GridPane.margin>
             </StackPane>
-            <StackPane fx:id="stackPane2" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0" styleClass="stack-pane-hover" GridPane.rowIndex="1">
+            <StackPane fx:id="pendingDuty" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0" styleClass="stack-pane-hover" GridPane.rowIndex="1">
                <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="48.0" prefWidth="101.0" text="SecondRole" textAlignment="CENTER" />
+                  <Label fx:id="secondRole" alignment="CENTER" contentDisplay="CENTER" prefHeight="48.0" prefWidth="101.0" text="Fire Staff" textAlignment="CENTER" />
                </children>
                <GridPane.margin>
                   <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
                </GridPane.margin>
             </StackPane>
-            <StackPane fx:id="stackPane3" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0" styleClass="stack-pane-hover" GridPane.rowIndex="2">
+            <StackPane fx:id="dutyInProgress" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0" styleClass="stack-pane-hover" GridPane.rowIndex="2">
                <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="75.0" text="Third Role" textAlignment="CENTER" />
+                  <Label fx:id="thirdRole" alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="75.0" text="Check Attendance" textAlignment="CENTER" />
                </children>
                <GridPane.margin>
                   <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />

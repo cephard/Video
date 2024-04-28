@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane prefHeight="530.0" prefWidth="699.0" stylesheets="@menucss.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="staff.StaffMemberController">
+<BorderPane prefHeight="530.0" prefWidth="699.0" stylesheets="@menucss.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="staff.StaffDetailsController">
     <center>
       <GridPane alignment="CENTER" hgap="10.0" prefHeight="118.0" prefWidth="494.0" vgap="10.0">
          <columnConstraints>
@@ -101,7 +101,7 @@
    <bottom>
               <HBox alignment="CENTER_RIGHT" spacing="100.0" BorderPane.alignment="CENTER_RIGHT">
                   <children>
-            <Button mnemonicParsing="false" onAction="#switchToStaff" text="Back">
+            <Button mnemonicParsing="false" onAction="#switchToDashboard" text="Back">
                <HBox.margin>
                   <Insets />
                </HBox.margin>

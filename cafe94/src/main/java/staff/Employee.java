@@ -1,10 +1,10 @@
 package staff;
 
-import java.util.ArrayList;
-
 public class Employee extends Staff {
     private long clockInTime;
     private long clockOutTime;
+
+    private static int ZERO =0;
 
     public Employee(int id, String firstName, String lastName, String role,int shift,String imagePath) {
         super(id, firstName, lastName, role,shift,imagePath);
@@ -19,7 +19,7 @@ public class Employee extends Staff {
     }
 
     public boolean hasClockedIn() {
-        return clockInTime > 0;
+        return clockInTime > ZERO;
     }
 
     public boolean hasClockedOut() {

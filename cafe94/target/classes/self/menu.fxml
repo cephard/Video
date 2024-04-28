@@ -30,7 +30,7 @@
                 <RowConstraints minHeight="-Infinity" prefHeight="100.0" vgrow="ALWAYS" />
                 <RowConstraints maxHeight="70.0" minHeight="-Infinity" vgrow="SOMETIMES" />
             </rowConstraints>
-            <StackPane fx:id="stackPane1" alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#viewItem1" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: grey;" styleClass="stack-pane-hover">
+            <StackPane fx:id="stackPane1" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#viewItem1" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: grey;" styleClass="stack-pane-hover">
                 <GridPane.margin>
                     <Insets />
                 </GridPane.margin>
@@ -38,35 +38,35 @@
                     <Text fx:id="item1" strokeType="OUTSIDE" strokeWidth="0.0" />
                 </children>
             </StackPane>
-            <StackPane fx:id="stackPane2" alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#viewItem2" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: grey;" styleClass="stack-pane-hover" GridPane.columnIndex="1">
+            <StackPane fx:id="stackPane2" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#viewItem2" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: grey;" styleClass="stack-pane-hover" GridPane.columnIndex="1">
                 <GridPane.margin>
                     <Insets />
                 </GridPane.margin>
                 <children>
                     <Text fx:id="item2" strokeType="OUTSIDE" strokeWidth="0.0" />
                 </children></StackPane>
-            <StackPane fx:id="stackPane3" alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#viewItem3" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: grey;" styleClass="stack-pane-hover" GridPane.columnIndex="2">
+            <StackPane fx:id="stackPane3" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#viewItem3" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: grey;" styleClass="stack-pane-hover" GridPane.columnIndex="2">
                 <GridPane.margin>
                     <Insets />
                 </GridPane.margin>
                 <children>
                     <Text fx:id="item3" strokeType="OUTSIDE" strokeWidth="0.0" />
                 </children></StackPane>
-            <StackPane fx:id="stackPane4" alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#viewItem4" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: grey;" styleClass="stack-pane-hover" GridPane.columnIndex="3">
+            <StackPane fx:id="stackPane4" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#viewItem4" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: grey;" styleClass="stack-pane-hover" GridPane.columnIndex="3">
                 <GridPane.margin>
                     <Insets />
                 </GridPane.margin>
                 <children>
                     <Text fx:id="item4" strokeType="OUTSIDE" strokeWidth="0.0" />
                 </children></StackPane>
-            <StackPane fx:id="stackPane5" alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#viewItem5" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: grey;" styleClass="stack-pane-hover" GridPane.rowIndex="1">
+            <StackPane fx:id="stackPane5" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#viewItem5" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: grey;" styleClass="stack-pane-hover" GridPane.rowIndex="1">
                 <GridPane.margin>
                     <Insets />
                 </GridPane.margin>
                 <children>
                     <Text fx:id="item5" strokeType="OUTSIDE" strokeWidth="0.0" />
                 </children></StackPane>
-            <StackPane fx:id="stackPane6" alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: grey;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <StackPane fx:id="stackPane6" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: grey;" GridPane.columnIndex="1" GridPane.rowIndex="1">
                 <GridPane.margin>
                     <Insets />
                 </GridPane.margin>
@@ -74,42 +74,42 @@
                     <Text fx:id="item6" strokeType="OUTSIDE" strokeWidth="0.0" />
                 </children>
             </StackPane>
-            <StackPane fx:id="stackPane7" alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: grey;" styleClass="stack-pane-hover" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <StackPane fx:id="stackPane7" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: grey;" styleClass="stack-pane-hover" GridPane.columnIndex="2" GridPane.rowIndex="1">
                 <GridPane.margin>
                     <Insets />
                 </GridPane.margin>
                 <children>
                     <Text fx:id="item7" strokeType="OUTSIDE" strokeWidth="0.0" />
                 </children></StackPane>
-            <StackPane fx:id="stackPane8" alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: grey;" styleClass="stack-pane-hover" GridPane.columnIndex="3" GridPane.rowIndex="1">
+            <StackPane fx:id="stackPane8" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: grey;" styleClass="stack-pane-hover" GridPane.columnIndex="3" GridPane.rowIndex="1">
                 <GridPane.margin>
                     <Insets />
                 </GridPane.margin>
                 <children>
                     <Text fx:id="item8" strokeType="OUTSIDE" strokeWidth="0.0" />
                 </children></StackPane>
-            <StackPane fx:id="stackPane9" alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: grey;" styleClass="stack-pane-hover" GridPane.rowIndex="2">
+            <StackPane fx:id="stackPane9" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: grey;" styleClass="stack-pane-hover" GridPane.rowIndex="2">
                 <GridPane.margin>
                     <Insets />
                 </GridPane.margin>
                 <children>
                     <Text fx:id="item9" strokeType="OUTSIDE" strokeWidth="0.0" />
                 </children></StackPane>
-            <StackPane fx:id="stackPane10" alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: grey;" styleClass="stack-pane-hover" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <StackPane fx:id="stackPane10" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: grey;" styleClass="stack-pane-hover" GridPane.columnIndex="1" GridPane.rowIndex="2">
                 <GridPane.margin>
                     <Insets />
                 </GridPane.margin>
                 <children>
                     <Text fx:id="item10" strokeType="OUTSIDE" strokeWidth="0.0" />
                 </children></StackPane>
-            <StackPane fx:id="stackPane11" alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: grey;" styleClass="stack-pane-hover" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <StackPane fx:id="stackPane11" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: grey;" styleClass="stack-pane-hover" GridPane.columnIndex="2" GridPane.rowIndex="2">
                 <GridPane.margin>
                     <Insets />
                 </GridPane.margin>
                 <children>
                     <Text fx:id="item11" strokeType="OUTSIDE" strokeWidth="0.0" />
                 </children></StackPane>
-            <StackPane fx:id="stackPane12" alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: grey;" styleClass="stack-pane-hover" GridPane.columnIndex="3" GridPane.rowIndex="2">
+            <StackPane fx:id="stackPane12" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: grey;" styleClass="stack-pane-hover" GridPane.columnIndex="3" GridPane.rowIndex="2">
                 <children>
                     <Text fx:id="item12" strokeType="OUTSIDE" strokeWidth="0.0" />
                 </children>
@@ -239,7 +239,7 @@
                         <Font size="14.0" />
                     </font>
                 </Label>
-                <Label fx:id="food8" alignment="CENTER" contentDisplay="TOP" graphicTextGap="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#openVegg" prefWidth="100.0" text="Vegetables" textAlignment="CENTER">
+                <Label fx:id="food8" alignment="CENTER" contentDisplay="TOP" graphicTextGap="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#openVegg" prefWidth="100.0" text="Vegg" textAlignment="CENTER">
                     <padding>
                         <Insets bottom="15.0" top="15.0" />
                     </padding>
@@ -301,7 +301,7 @@
                               <Font size="18.0" />
                            </font>
                         </Text>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Reservations">
                            <font>
                               <Font size="18.0" />
                            </font>

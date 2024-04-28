@@ -16,7 +16,6 @@ public class DeliveryDriver extends Employee {
     private ArrayList<Order> deliveredOrders;
     private int totalMillage;
 
-
     /**
      * Constructor to create a new delivery driver
      * @param id
@@ -36,6 +35,10 @@ public class DeliveryDriver extends Employee {
         this.deliveredOrders = new ArrayList<>();
     }
 
+    public DeliveryDriver(int id, String firstName, String lastName, String role, int shift, String imagePath) {
+        super(id, firstName, lastName, role,shift,imagePath);
+    }
+
     /**
      * Delivers an order to a customer and adds the order into the list of successful deliveries
      * @param newOrder
@@ -50,8 +53,6 @@ public class DeliveryDriver extends Employee {
    public void deliveyStatus() {
        DataManagement data = new DataManagement();
         Sheet sheet= data.getSheetData("DeliveryOrders");
-
-
 
    }
 }

@@ -11,8 +11,6 @@ import java.time.LocalTime;
 import java.util.Map;
 
 public class StaffController extends StaffDataController {
-    @FXML
-    //protected static Order order = new Order(2334);
     private static Staff selectedStaffMember;
     Map<String, Staff> staffMemberList;
     @FXML
@@ -40,9 +38,8 @@ public class StaffController extends StaffDataController {
     }
 
     /**
-     * Method to extract selected items from the menu in form of an order
+     * Method to extract selected employee from the staff list
      *
-     * @Ceph
      */
 
     public static Staff getEmployeeFromStaffList() {
@@ -66,6 +63,7 @@ public class StaffController extends StaffDataController {
 
     /**
      * Opens new Scene with staff member details
+     * clocks in automatically to keep track of staff activity in the cafe
      * @param staffMember
      */
     private void handleStackPaneClick(Staff staffMember) {

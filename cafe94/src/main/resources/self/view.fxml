@@ -12,7 +12,7 @@
       <VBox alignment="CENTER" spacing="100.0" VBox.vgrow="ALWAYS">
          <children>
             <!-- staff Button -->
-            <Button fx:id="staffButton" mnemonicParsing="false" onAction="#switchToStaff" prefHeight="50.0" prefWidth="150.0" styleClass="main-button" text="staff">
+            <Button fx:id="staffButton" mnemonicParsing="false" onAction="#switchToStaff" prefHeight="50.0" prefWidth="150.0" styleClass="main-button" text="Staff">
                <font>
                   <Font name="Arial" size="18.0" />
                </font>

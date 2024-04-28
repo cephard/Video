@@ -1,6 +1,3 @@
-/**
- *
- */
 
 package staff;
 
@@ -20,9 +17,17 @@ public class Staff {
     private LocalTime clockInTime;
     private LocalTime clockOutTime;
 
-
-
-    public Staff(int id,String firstName,String lastName, String role, int shift, String imagePath) {
+    /**
+     * Constructs a new Staff object.
+     * @param id The unique identifier of the staff member.
+     * @param firstName The first name of the staff member.
+     * @param lastName The last name of the staff member.
+     * @param role The role of the staff member.
+     * @param shift The shift duration of the staff member.
+     * @param imagePath The path to the staff member's image.
+     */
+    public Staff(int id,String firstName,String lastName, String role,
+                 int shift, String imagePath) {
         this.id =id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -82,27 +87,42 @@ public class Staff {
         this.shift += overTime;
     }
 
+    /**
+     * Sets the clock-in time for the staff member.
+     * @param clockInTime The time the staff member clocked in.
+     */
     public void clockIn(LocalTime clockInTime){
         this.clockInTime =clockInTime;
     }
 
+    /**
+     * Gets the formatted clock-in time of the staff member.
+     * @return The formatted clock-in time.
+     */
     public String getClockIn(){
         return clockInTime.format(DateTimeFormatter.ofPattern("HH:mm"));
     }
 
     /**
      * accessing current date in form of string
-     * @return
+     * @return Current date
      */
     //returning date in form of  string to easily save and retrieve into CSV
     public String getDate() {
         return date.toString();
     }
 
+    /**
+     * Sets the clock-out time for the staff member.
+     */
     public void setClockOut(){
         this.clockOutTime = LocalTime.now();
     }
 
+    /**
+     * Gets the formatted clock-out time of the staff member.
+     * @return The formatted clock-out time.
+     */
     public String getClockOut(){
         return clockOutTime.format(DateTimeFormatter.ofPattern("HH:mm"));
     }

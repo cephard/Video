@@ -11,7 +11,4 @@ public class ManagerController {
     private void switchToStaff() throws IOException {
         App.setRoot("staff");
     }
-
-
-
 }
