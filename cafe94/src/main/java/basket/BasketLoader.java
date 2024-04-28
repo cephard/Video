@@ -11,6 +11,7 @@ import org.apache.poi.ss.usermodel.Sheet;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class BasketLoader {
 
@@ -245,6 +246,85 @@ public class BasketLoader {
         getExcelData.closeExcel();
 
 
+    }
+
+    public void setDeliveryInfo(String userID,String userName, String userAddress, String basketInfo) {
+        boolean userStatus=false;
+        this.sheet=getExcelData.getSheetData("DeliveryOrders");
+        Row row;
+        Cell cell;
+        int lastRow= sheet.getLastRowNum() +1;
+
+        row=sheet.createRow(lastRow);
+        cell= row.createCell(0);
+        cell.setCellValue(userID);
+        row=sheet.getRow(lastRow);
+        cell= row.createCell(1);
+        cell.setCellValue(userName);
+        row=sheet.getRow(lastRow);
+        cell= row.createCell(2);
+        cell.setCellValue(userAddress);
+        row=sheet.getRow(lastRow);
+        cell= row.createCell(3);
+        cell.setCellValue(basketInfo);
+
+        row=sheet.getRow(lastRow);
+        cell= row.createCell(4);
+        cell.setCellValue("No");
+
+        getExcelData.closeExcel();
+    }
+    public ArrayList<String> getDeliveryInfo() throws IOException {
+        String userID=null;
+        String userInfo =null;
+        ArrayList<String> info = null;
+        this.sheet=getExcelData.getSheetData("DeliveryOrders");
+        Row row;
+        Cell cell;
+        for(int i = 1; i<=sheet.getLastRowNum(); i++) {
+            row = sheet.getRow(i);
+            cell = row.getCell(3);
+            if(cell.getStringCellValue().equals("No")) {
+
+                cell= row.getCell(0);
+                userID = cell.getStringCellValue();
+                info.add(userID);
+
+                cell= row.getCell(1);
+                userInfo = "User Name : " + cell.getStringCellValue()+"\n";
+
+                cell= row.getCell(2);
+                userInfo = "Address : " + cell.getStringCellValue()+"\n";
+
+                info.add(userInfo);
+
+                return info;
+
+            }
+        }
+
+        getExcelData.closeFIS();
+        getExcelData.closeWorkBook();
+        return null;
+    }
+    public void changeDeliveryStatus(String userID) throws IOException {
+        this.sheet = getExcelData.getSheetData("DeliveryOrders");
+        Row row;
+        Cell cell;
+        for (int i = 1; i <= sheet.getLastRowNum(); i++) {
+            row = sheet.getRow(i);
+            cell = row.getCell(0);
+            if (cell.getStringCellValue().equals(userID)) {
+                    cell=row.getCell(4);
+                if (cell.getStringCellValue().equals("Yes")) {
+                    cell.setCellValue("No");
+                    break;
+                }
+            }
+
+        }
+
+        getExcelData.closeExcel();
     }
 
 }

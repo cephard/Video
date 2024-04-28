@@ -8,8 +8,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.StackPane;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.*;
 import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -49,6 +50,7 @@ public class MenuController {
     @FXML private TextArea showBasketItems;
     @FXML private Text showBasketItems2;
     @FXML private Text customerType;
+    @FXML private StackPane stackPane1;
     public void initialize(){
         userName.setText(data.getUserName());
         //System.out.println(data.getUserID());
@@ -113,7 +115,7 @@ public class MenuController {
     }
     @FXML
     private void openHotDrink() throws IOException {
-
+        
         String item="HotDrinks";
         setItems(5,1,item);
 
@@ -235,6 +237,9 @@ public class MenuController {
             newStage.setScene(new Scene(newRoot, 300, 200));
             newStage.show();
         }else {
+            if(cTypeData.getCustomerType().equals("Delivery")) {
+                basketLoader.setDeliveryInfo(basket.getUserId(), data.getUserName(), data.getUserAddress(),basket.toString());
+            }
             basketLoader.storeOrder(basket.getUserId(),basket.toString());
             basketLoader.changeBasketStatus(basket.getUserId(),"No");
             basketLoader.deleteTempBasket(basket.getUserId());

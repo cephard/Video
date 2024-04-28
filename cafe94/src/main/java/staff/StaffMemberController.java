@@ -38,6 +38,7 @@ public class StaffMemberController {
     StackPane pendingDuty;
     @FXML
     StackPane dutyInProgress;
+
     /**
      * Loading Staff details from the list of employees in the system
      * setting the employee status to clocked in
@@ -60,6 +61,7 @@ public class StaffMemberController {
         imageView.setOnMouseClicked(event -> {
             switchToDetails();
         });
+
         }
 
     private void handleStackPaneClick(String role) {
@@ -93,7 +95,7 @@ public class StaffMemberController {
     }
 
     private void setDriverDuties() {
-        firstRole.setText("Delivered Orders");
+        firstRole.setText("Delivery Orders");
         secondRole.setText("Previous Orders");
         thirdRole.setText("Pending Orders");
     }

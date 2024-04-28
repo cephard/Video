@@ -97,6 +97,9 @@ public class LoginController {
          App.setRoot("view");
      }
 
+     public String getUserAddress() {
+        return CustomerLoginController.getAddress();
+     }
      @FXML
     public  void switchToSignUp() throws  IOException{
         App.setRoot("signUpPage");

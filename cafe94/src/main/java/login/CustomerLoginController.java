@@ -25,6 +25,9 @@ public class CustomerLoginController {
     public static String getUserID(){
         return userData.get(0);
     }
+    public static String getAddress(){
+        return userData.get(4);
+    }
     public static boolean checkUserData(String regID,String password)  {
         boolean flag = false;
         DataManagement data = new DataManagement();

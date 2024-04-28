@@ -42,13 +42,23 @@ public class DataManagement {
     }
 
     public void closeFIS() throws IOException {
-        fileInputStream.close();
+
+        try {
+            fileInputStream.close();
+        }catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
     public void closeFOS() throws IOException {
         fileOutputStream.close();
     }
     public void closeWorkBook() throws IOException {
-        workbook.close();
+        try {
+            workbook.close();
+        }catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 
     public void closeExcel() {
