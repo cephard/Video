@@ -20,6 +20,7 @@ public class LoginController {
     //static UserData data = new UserData();
 
     static CustomerLoginController data = new CustomerLoginController();
+    static StaffLoginController staffData = new StaffLoginController();
 
     private static final LoginController instance = new LoginController();
     public static LoginController getInstance() {
@@ -28,6 +29,9 @@ public class LoginController {
 
     private static String regID;
     private static String userPassword;
+    App userTypeInfo = new App();
+    public  String userType= userTypeInfo.getUserType();
+
     @FXML
     public void switchToResult() throws IOException {
 
@@ -44,18 +48,32 @@ public class LoginController {
 //                } else {
 //                    App.setRoot("result");
 //                }
-        if (data.checkUserData(regID,userPassword)) {
-            // if (userName.equals(admin_User) && userPassword.equals(admin_Pass)) {
-            userName1 = regID;
-         //  setValues();
-            App.setRoot("passResult");
-        } else if (regID.isEmpty() || userPassword.isEmpty()) {
-            App.setRoot("login");
-        } else {
-            loginStatus.setText("Invalid details Try again");
-            //App.setRoot("login");
-        }
+        if(userType.equals("Staff")) {
+            if (staffData.checkUserData(regID, userPassword)) {
+                // if (userName.equals(admin_User) && userPassword.equals(admin_Pass)) {
+                userName1 = regID;
+                //  setValues();
+                App.setRoot("staff");
+            } else if (regID.isEmpty() || userPassword.isEmpty()) {
+                App.setRoot("login");
+            } else {
+                loginStatus.setText("Invalid details Try again");
+                //App.setRoot("login");
+            }
 
+        }else {
+            if (data.checkUserData(regID, userPassword)) {
+                // if (userName.equals(admin_User) && userPassword.equals(admin_Pass)) {
+                userName1 = regID;
+                //  setValues();
+                App.setRoot("passResult");
+            } else if (regID.isEmpty() || userPassword.isEmpty()) {
+                App.setRoot("login");
+            } else {
+                loginStatus.setText("Invalid details Try again");
+                //App.setRoot("login");
+            }
+        }
 
     }
 

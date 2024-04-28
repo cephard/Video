@@ -231,7 +231,19 @@ public class BasketLoader {
         sheet.removeRow(row);
         row= sheet.getRow(currentRow+INCREMENT_INDEX_TWICE);
         sheet.removeRow(row);
+
+        row=sheet.createRow(currentRow);
+        cell= row.createCell(0);
+        cell.setCellValue(userID);
+        row=sheet.createRow(currentRow+INCREMENT_INDEX_ONCE);
+        cell= row.createCell(0);
+        cell.setCellValue(userID);
+        row=sheet.createRow(currentRow+INCREMENT_INDEX_TWICE);
+        cell= row.createCell(0);
+        cell.setCellValue(userID);
+
         getExcelData.closeExcel();
+
 
     }
 

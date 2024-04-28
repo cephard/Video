@@ -15,4 +15,6 @@ public class LoginOrSignUpPageContoller {
 
         App.setRoot("signUpPage");
     }
+
+
 }

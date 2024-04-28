@@ -196,7 +196,9 @@ public class Basket {
       return text;
     }
 
-
+    public void emptyBasket() {
+        items.clear();
+    }
     @Override
     public String toString() {
       String text = "";

@@ -6,8 +6,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -111,6 +113,7 @@ public class MenuController {
     }
     @FXML
     private void openHotDrink() throws IOException {
+
         String item="HotDrinks";
         setItems(5,1,item);
 
@@ -224,9 +227,27 @@ public class MenuController {
     }
     @FXML
     private void placeOrder() {
-        basketLoader.storeOrder(basket.getUserId(),basket.toString());
-        basketLoader.changeBasketStatus(basket.getUserId(),"No");
-        basketLoader.deleteTempBasket(basket.getUserId());
+        if(basket.basketStatus()) {
+            Stage newStage = new Stage();
+            newStage.setTitle("Basket is Empty");
+            StackPane newRoot = new StackPane();
+            newRoot.getChildren().add(new Text("Add items in basket to place order "));
+            newStage.setScene(new Scene(newRoot, 300, 200));
+            newStage.show();
+        }else {
+            basketLoader.storeOrder(basket.getUserId(),basket.toString());
+            basketLoader.changeBasketStatus(basket.getUserId(),"No");
+            basketLoader.deleteTempBasket(basket.getUserId());
+            basket.emptyBasket();
+
+            Stage newStage = new Stage();
+            newStage.setTitle("Order Confirmation");
+            StackPane newRoot = new StackPane();
+            newRoot.getChildren().add(new Text("Your Order Accepted "));
+            newStage.setScene(new Scene(newRoot, 300, 200));
+            newStage.show();
+        }
+
     }
     private void editItem(MenuDataController itemData) throws IOException {
 

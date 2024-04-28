@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import login.LoginController;
 
 import java.io.IOException;
 
@@ -25,16 +26,26 @@ public class App extends Application {
         stage.show();
     }
 
+    public static String userType="";
+    private static final App instance = new App();
+    public static App getInstance() {
+        return instance;
+    }
     @FXML
     private void switchToStaff() throws IOException {
-        App.setRoot("staff");
+        this.userType="Staff";
+        App.setRoot("login");
     }
 
     @FXML
     private void switchToCustomer() throws IOException {
+        this.userType="Customer";
         App.setRoot("login");
     }
 
+    public static String getUserType(){
+        return userType;
+    }
     public static void setRoot(String fxml) throws IOException {
         scene.setRoot(loadFXML(fxml));
     }
