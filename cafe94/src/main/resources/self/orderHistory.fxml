@@ -5,11 +5,11 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 
-<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menu.OrderHistory">
+<BorderPane prefHeight="306.0" prefWidth="454.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menu.OrderHistory">
    <center>
-      <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+      <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="248.0" prefWidth="386.0" BorderPane.alignment="CENTER">
          <content>
-            <HBox fx:id="container" prefHeight="237.0" prefWidth="388.0" />
+            <HBox fx:id="container" alignment="CENTER" prefHeight="128.0" prefWidth="234.0" />
          </content>
       </ScrollPane>
    </center>

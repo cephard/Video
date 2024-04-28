@@ -30,11 +30,16 @@ public class OrderHistory {
 //        } else {
 //            basketView.setText(basket.toString());
 //        }
-       // this.orders = data.getOrderHistory(userID);
-        System.out.println("here   ");
-        this.orders.add("basket dadadadadawd");
+        if(data.getOrderHistory(userID).isEmpty()) {
+            this.orders.add("There is no order History");
+        } else {
+            this.orders = data.getOrderHistory(userID);
+        }
 
-        this.orders.add("basket22222222222 dadadadadawd");
+        //System.out.println("here   ");
+        //this.orders.add("basket dadadadadawd");
+
+       // this.orders.add("basket22222222222 dadadadadawd");
         initialize();
     }
 
@@ -43,7 +48,7 @@ public class OrderHistory {
             try {
                 for (int i=0;i<this.orders.size();i++) {
 
-                    FXMLLoader loader = new FXMLLoader(App.class.getResource("order.fxml"));
+                    FXMLLoader loader = new FXMLLoader(App.class.getResource("orderCard.fxml"));
                         StackPane stackPane = loader.load();
                         OrderCard controller = loader.getController();
                         controller.setOrder(orders.get(i));

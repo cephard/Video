@@ -328,7 +328,7 @@ public class BasketLoader {
     }
 
     public ArrayList<String> getOrderHistory(String userID) {
-        ArrayList<String> orders = null;
+        ArrayList<String> orders = new ArrayList<>();
         this.sheet = getExcelData.getSheetData("OrderHistory");
         Row row;
         Cell cell;
