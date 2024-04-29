@@ -16,10 +16,6 @@ public class DeliveryDriver extends Employee {
     private ArrayList<Order> deliveredOrders;
     private int totalMillage;
 
-    BasketLoader data = new BasketLoader();
-    private String userID = "";
-    public static String userInfo = "ntn";
-    public static  ArrayList<String> deliveryDetails;
 
 
 
@@ -40,20 +36,13 @@ public class DeliveryDriver extends Employee {
         this.vehicleType = vehicleType;
         this.vehicleRegistration = vehicleRegistration;
         this.deliveredOrders = new ArrayList<>();
-        this.deliveryDetails =data.getDeliveryInfo();
-         this.userID= deliveryDetails.get(0);
-        this.userInfo= deliveryDetails.get(1);
+
     }
 
     public DeliveryDriver(int id, String firstName, String lastName, String role, int shift, String imagePath) {
         super(id, firstName, lastName, role,shift,imagePath);
     }
-    public String getDeliveryDetails() {
-        return userInfo;
-    }
-    public void changeDeliveryStatus() throws IOException {
-        data.changeDeliveryStatus(this.userID);
-    }
+
     /**
      * Delivers an order to a customer and adds the order into the list of successful deliveries
      * @param newOrder

@@ -78,7 +78,7 @@
          <children>
             <StackPane fx:id="mainDuty" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0" styleClass="stack-pane-hover">
                <children>
-                  <Label fx:id = "firstRole" alignment="CENTER" contentDisplay="CENTER" prefHeight="58.0" prefWidth="79.0" text="Hire Staff" textAlignment="CENTER" />
+                  <Text fx:id="firstRole" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="73.33673095703125" StackPane.alignment="TOP_CENTER" />
                </children>
                <GridPane.margin>
                   <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />

@@ -4,6 +4,7 @@
 
 package staff;
 
+import basket.BasketLoader;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -12,11 +13,13 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 import self.App;
 import java.io.IOException;
+import java.util.ArrayList;
+
 import static staff.StaffDataController.updateClockOut;
 
 public class StaffMemberController {
     @FXML
-    private Label firstRole;
+    private Text firstRole;
     @FXML
     private Label secondRole;
     @FXML
@@ -39,6 +42,10 @@ public class StaffMemberController {
     @FXML
     StackPane dutyInProgress;
 
+    BasketLoader data = new BasketLoader();
+    private String userID = "";
+    public  String userInfo = "ntn";
+    public ArrayList<String> deliveryDetails = new ArrayList<>();
     /**
      * Loading Staff details from the list of employees in the system
      * setting the employee status to clocked in
@@ -61,8 +68,51 @@ public class StaffMemberController {
         imageView.setOnMouseClicked(event -> {
             switchToDetails();
         });
+        mainDuty.setOnMouseClicked(event -> {
+           getOrders();
+        });
 
+        pendingDuty.setOnMouseClicked(event -> {
+            changeStatus();
+        });
+    }
+
+    public void getOrders(){
+        if(staffMember.getRole().equals("deliveryDriver")) {
+            try {
+                if(data.getDeliveryInfo().isEmpty()) {
+                    firstRole.setText("No orders");
+                } else {
+                    this.deliveryDetails =data.getDeliveryInfo();
+                    this.userID= deliveryDetails.get(0);
+                    this.userInfo= deliveryDetails.get(1);
+                    firstRole.setText(userInfo);
+                }
+
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         }
+    }
+    public void changeStatus() {
+
+        if(staffMember.getRole().equals("deliveryDriver")) {
+                try {
+                    if(data.getDeliveryInfo().isEmpty()) {
+                        secondRole.setText("No orders");
+                    } else {
+                        secondRole.setText("Order Delivered");
+                        this.deliveryDetails = data.getDeliveryInfo();
+                        this.userID = deliveryDetails.get(0);
+                        this.userInfo = deliveryDetails.get(1);
+                        data.changeDeliveryStatus(userID);
+                    }
+               // System.out.println("here ");
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }
 
     private void handleStackPaneClick(String role) {
         // Set duties based on role using switch statement

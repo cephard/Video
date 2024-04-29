@@ -275,15 +275,15 @@ public class BasketLoader {
         getExcelData.closeExcel();
     }
     public ArrayList<String> getDeliveryInfo() throws IOException {
-        String userID=null;
-        String userInfo =null;
-        ArrayList<String> info = null;
+        String userID="";
+        String userInfo ="";
+        ArrayList<String> info = new ArrayList<>();
         this.sheet=getExcelData.getSheetData("DeliveryOrders");
         Row row;
         Cell cell;
         for(int i = 1; i<=sheet.getLastRowNum(); i++) {
             row = sheet.getRow(i);
-            cell = row.getCell(3);
+            cell = row.getCell(4);
             if(cell.getStringCellValue().equals("No")) {
 
                 cell= row.getCell(0);
@@ -294,7 +294,8 @@ public class BasketLoader {
                 userInfo = "User Name : " + cell.getStringCellValue()+"\n";
 
                 cell= row.getCell(2);
-                userInfo = "Address : " + cell.getStringCellValue()+"\n";
+                userInfo = userInfo + "Address : " + cell.getStringCellValue()+"\n";
+
 
                 info.add(userInfo);
 
@@ -305,7 +306,7 @@ public class BasketLoader {
 
         getExcelData.closeFIS();
         getExcelData.closeWorkBook();
-        return null;
+        return info;
     }
     public void changeDeliveryStatus(String userID) throws IOException {
         this.sheet = getExcelData.getSheetData("DeliveryOrders");
@@ -316,8 +317,8 @@ public class BasketLoader {
             cell = row.getCell(0);
             if (cell.getStringCellValue().equals(userID)) {
                     cell=row.getCell(4);
-                if (cell.getStringCellValue().equals("Yes")) {
-                    cell.setCellValue("No");
+                if (cell.getStringCellValue().equals("No")) {
+                    cell.setCellValue("Yes");
                     break;
                 }
             }
