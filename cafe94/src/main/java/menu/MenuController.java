@@ -286,4 +286,18 @@ public class MenuController {
         orderViewStage.showAndWait();
     }
 
+    public void openEvent() throws IOException {
+        FXMLLoader loader = new FXMLLoader(App.class.getResource("event.fxml"));
+        Parent root = loader.load();
+        Event controller = loader.getController();
+        controller.setEvent(basket.getUserId());
+
+
+        Stage eventViewStage = new Stage();
+        controller.setStage(eventViewStage);
+        eventViewStage.setTitle("Event Registration");
+        eventViewStage.setScene(new Scene(root, 500, 500));
+        eventViewStage.initModality(Modality.APPLICATION_MODAL);
+        eventViewStage.showAndWait();
+    }
 }
