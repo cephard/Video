@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="593.0" prefWidth="732.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="526.0" prefWidth="382.0" StackPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="26.0" prefWidth="104.0" text="Event Registration" textAlignment="CENTER">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Label>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Event Name">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </Text>
+            <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="26.0" prefWidth="290.0" VBox.vgrow="NEVER">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </TextField>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </Text>
+            <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="26.0" prefWidth="289.0">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </TextField>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Time">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </Text>
+            <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="26.0" prefWidth="289.0">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </TextField>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Guest">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </Text>
+            <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="26.0" prefWidth="289.0">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </TextField>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Table Required">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </Text>
+            <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="26.0" prefWidth="289.0">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </TextField>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </Text>
+            <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="26.0" prefWidth="289.0">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </TextField>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Explain about your Event">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </Text>
+            <TextArea maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="66.0" prefWidth="295.0" />
+         </children>
+         <StackPane.margin>
+            <Insets bottom="10.0" />
+         </StackPane.margin>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+   </children>
+</StackPane>
