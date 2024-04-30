@@ -46,7 +46,7 @@
                     <Insets />
                 </GridPane.margin>
                 <children>
-                    <Label alignment="CENTER" contentDisplay="CENTER" styleClass="blueberry-text" text="Waiter">
+                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="80.0" prefWidth="139.0" styleClass="blueberry-text" text="Chef">
                         <StackPane.margin>
                             <Insets top="7.5" />
                         </StackPane.margin>
@@ -60,7 +60,7 @@
                     <Insets />
                 </GridPane.margin>
                 <children>
-                    <Label alignment="CENTER" contentDisplay="CENTER" styleClass="blueberry-text" text="Chef">
+                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="68.0" prefWidth="119.0" styleClass="blueberry-text" text="Waiter">
                         <StackPane.margin>
                             <Insets top="7.5" />
                         </StackPane.margin>
@@ -74,7 +74,7 @@
                     <Insets />
                 </GridPane.margin>
                 <children>
-                    <Label alignment="CENTER" contentDisplay="CENTER" styleClass="blueberry-text" text="Delivery Driver">
+                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="97.0" prefWidth="160.0" styleClass="blueberry-text" text="Delivery Driver">
                         <StackPane.margin>
                             <Insets top="7.5" />
                         </StackPane.margin>

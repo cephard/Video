@@ -32,7 +32,7 @@ public class App extends Application {
     @FXML
     private void switchToStaff() throws IOException {
         this.userType="Staff";
-        App.setRoot("login");
+        App.setRoot("staffLogin");
     }
 
     @FXML
@@ -52,9 +52,4 @@ public class App extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
         return fxmlLoader.load();
     }
-
-    public static void main(String[] args) {
-        launch();
-    }
-
 }

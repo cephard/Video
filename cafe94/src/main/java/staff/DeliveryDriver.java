@@ -1,6 +1,6 @@
 /**
  * This class contains details about the delivery driver where they will
- * be able to access an order and deliver it
+ * be able to access an report and deliver it
  */
 package staff;
 
@@ -44,7 +44,7 @@ public class DeliveryDriver extends Employee {
     }
 
     /**
-     * Delivers an order to a customer and adds the order into the list of successful deliveries
+     * Delivers an report to a customer and adds the report into the list of successful deliveries
      * @param newOrder
      * @param millage
      * @return

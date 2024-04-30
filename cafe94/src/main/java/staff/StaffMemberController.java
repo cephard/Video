@@ -5,6 +5,7 @@
 package staff;
 
 import basket.BasketLoader;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -18,6 +19,10 @@ import java.util.ArrayList;
 import static staff.StaffDataController.updateClockOut;
 
 public class StaffMemberController {
+    @FXML
+    public Label forthRole;
+    @FXML
+    private StackPane secondaryDuty;
     @FXML
     private Text firstRole;
     @FXML
@@ -75,6 +80,17 @@ public class StaffMemberController {
         pendingDuty.setOnMouseClicked(event -> {
             changeStatus();
         });
+
+        dutyInProgress.setOnMouseClicked(mouseEvent -> {
+            switchToReport();
+        });
+
+        //making sure only manager can access these roles
+        if (staffMember.getRole().equalsIgnoreCase("manager")) {
+            secondaryDuty.setOnMouseClicked(mouseEvent -> {
+                switchToAttendanceReport();
+            });
+        }
     }
 
     public void getOrders(){
@@ -135,36 +151,55 @@ public class StaffMemberController {
     private void setManagerDuties() {
         firstRole.setText("Hire Staff");
         secondRole.setText("Fire Staff");
-        thirdRole.setText("Check Attendance");
+        thirdRole.setText("Staff Details");
+        forthRole.setText("Attendance");
     }
 
     private void setChefDuties() {
         firstRole.setText("Make Order");
         secondRole.setText("Serve Customer");
         thirdRole.setText("Daily Special");
+        forthRole.setText("Cooked Orders");
     }
 
     private void setDriverDuties() {
         firstRole.setText("Delivery Orders");
         secondRole.setText("Previous Orders");
         thirdRole.setText("Pending Orders");
+        forthRole.setText("Vehicle Millage");
     }
 
     private void setWaiterDuties() {
         firstRole.setText("Take Order");
         secondRole.setText("Serve Order");
         thirdRole.setText("Print Receipt");
+        forthRole.setText("Served orders");
     }
 
 
     @FXML
-        private void staffRole(){
-
+        private void switchToReport() {
+        try {
+            App.setRoot("report");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
+    }
+
+    @FXML
+    private void switchToAttendanceReport() {
+        try {
+            App.setRoot("attendance");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
 
     @FXML
     private void switchToStaff() throws IOException {
+        String attendanceSheet = "cafe94/src/main/resources/self/DataBase/staffAttendance.csv";
+        updateClockOut(attendanceSheet,staffMember);
         App.setRoot("staff");
     }
 

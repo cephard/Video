@@ -37,10 +37,6 @@ public class Staff {
         this.date = LocalDate.now();
     }
 
-    public void setItemImage(String itemImagePath) {
-
-    }
-
     public String getImagePath() {
         return imagePath;
     }
@@ -125,6 +121,10 @@ public class Staff {
      */
     public String getClockOut(){
         return clockOutTime.format(DateTimeFormatter.ofPattern("HH:mm"));
+    }
+
+    public int getHours() {
+        return shift;
     }
 }
 

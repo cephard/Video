@@ -78,7 +78,7 @@
          <children>
             <StackPane fx:id="mainDuty" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0" styleClass="stack-pane-hover">
                <children>
-                  <Text fx:id="firstRole" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="73.33673095703125" StackPane.alignment="TOP_CENTER" />
+                  <Text fx:id="firstRole" strokeType="OUTSIDE" strokeWidth="0.0" text="Pending Orders" textAlignment="CENTER" wrappingWidth="369.33673095703125" StackPane.alignment="CENTER" />
                </children>
                <GridPane.margin>
                   <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
@@ -92,14 +92,23 @@
                   <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
                </GridPane.margin>
             </StackPane>
-            <StackPane fx:id="dutyInProgress" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0" styleClass="stack-pane-hover" GridPane.rowIndex="2">
-               <children>
-                  <Label fx:id="thirdRole" alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="75.0" text="Check Attendance" textAlignment="CENTER" />
-               </children>
+            <HBox alignment="CENTER" spacing="45.0" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
                </GridPane.margin>
-            </StackPane>
+               <children>
+                  <StackPane fx:id="dutyInProgress" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="186.0" styleClass="stack-pane-hover">
+                     <children>
+                        <Label fx:id="thirdRole" alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="156.0" text="Staff Details" textAlignment="CENTER" />
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="secondaryDuty" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="186.0" styleClass="stack-pane-hover">
+                     <children>
+                        <Label fx:id="forthRole" alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="156.0" text="Attendance" textAlignment="CENTER" />
+                     </children>
+                  </StackPane>
+               </children>
+            </HBox>
          </children>
          <BorderPane.margin>
             <Insets bottom="50.0" right="30.0" top="50.0" />

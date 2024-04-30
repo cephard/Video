@@ -31,7 +31,7 @@ public class OrderHistory {
 //            basketView.setText(basket.toString());
 //        }
         if(data.getOrderHistory(userID).isEmpty()) {
-            this.orders.add("There is no order History");
+            this.orders.add("There is no report History");
         } else {
             this.orders = data.getOrderHistory(userID);
         }

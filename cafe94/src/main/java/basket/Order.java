@@ -6,7 +6,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * Represents an order containing a list of menu items.
+ * Represents an report containing a list of menu items.
  */
 public class Order {
     private final List<Item> order;
@@ -16,9 +16,9 @@ public class Order {
 
 
     /**
-     * Constructs an Order object with a specified order ID and the current date.
+     * Constructs an Order object with a specified report ID and the current date.
      *
-     * @param orderId The ID of the order.
+     * @param orderId The ID of the report.
      */
     public Order(String orderId, String type) {
         this.order = new ArrayList<>();
@@ -27,7 +27,7 @@ public class Order {
         this.orderType = type;
     }
     /**
-     * Removes a menu item from the order.
+     * Removes a menu item from the report.
      *
      * @param item The menu item to remove.
      */
@@ -36,17 +36,17 @@ public class Order {
             if (order.contains(item)) {
                 order.remove(item);
             } else {
-                System.out.println("Item is not in the order.");
+                System.out.println("Item is not in the report.");
             }
         } else {
-            System.out.println("Cannot remove null item from the order.");
+            System.out.println("Cannot remove null item from the report.");
         }
     }
 
     /**
-     * Calculates the total price of the items in the order.
+     * Calculates the total price of the items in the report.
      *
-     * @return The total price of the order.
+     * @return The total price of the report.
      */
     public double getTotalPrice() {
         double totalPrice = 0.0;
@@ -57,27 +57,27 @@ public class Order {
     }
 
     /**
-     * Retrieves all items in the order.
+     * Retrieves all items in the report.
      *
-     * @return A list of all items in the order.
+     * @return A list of all items in the report.
      */
     public ArrayList<Item> getOrder() {
         return new ArrayList<>(order);
     }
 
     /**
-     * Retrieves the ID of the order.
+     * Retrieves the ID of the report.
      *
-     * @return The order ID.
+     * @return The report ID.
      */
     public String getOrderId() {
         return orderId;
     }
 
     /**
-     * Checks if the order is empty.
+     * Checks if the report is empty.
      *
-     * @return True if the order is empty, false otherwise.
+     * @return True if the report is empty, false otherwise.
      */
     public boolean isEmpty() {
         return order.isEmpty();

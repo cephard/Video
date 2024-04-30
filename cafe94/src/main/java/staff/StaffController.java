@@ -3,7 +3,8 @@ package staff;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
-//import order.Order;
+//import report.Order;
+import report.Report;
 import self.App;
 
 import java.io.IOException;
@@ -27,6 +28,7 @@ public class StaffController extends StaffDataController {
     private StackPane deliveryDriverStackPane;
 
     LocalTime currentTime = LocalTime.now();
+    protected static Report report = new Report();
 
 
     {
@@ -47,9 +49,6 @@ public class StaffController extends StaffDataController {
     }
 
     public void initialize() {
-        managerStackPane.setOnMouseClicked(event -> {
-            handleStackPaneClick(staffMemberList.get("manager"));
-        });
         chefStackPane.setOnMouseClicked(event -> {
             handleStackPaneClick(staffMemberList.get("chef"));
         });
@@ -58,6 +57,9 @@ public class StaffController extends StaffDataController {
         });
         deliveryDriverStackPane.setOnMouseClicked(event -> {
             handleStackPaneClick(staffMemberList.get("deliveryDriver"));
+        });
+        managerStackPane.setOnMouseClicked(event -> {
+            handleStackPaneClick(staffMemberList.get("manager"));
         });
     }
 
@@ -76,6 +78,10 @@ public class StaffController extends StaffDataController {
             throw new RuntimeException(e);
         }
         switchToStaffMember();
+    }
+
+    public static Report getReportFromStaff() {
+        return report;
     }
 
     /**

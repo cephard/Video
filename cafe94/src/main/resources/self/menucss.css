@@ -222,9 +222,14 @@ list-view .cell {
 }
 
 .list-view .cell:odd {
-    -fx-background-color: #228B22;
-    -fx-text-fill: white;
+    -fx-background-color: #ffffff;
 }
+
+.list-view .cell:hover {
+    -fx-background-color: #FFA500;
+       -fx-text-fill: #FFFFFF;
+}
+
 
 #imageView {
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 0);

@@ -233,7 +233,7 @@ public class MenuController {
             Stage newStage = new Stage();
             newStage.setTitle("Basket is Empty");
             StackPane newRoot = new StackPane();
-            newRoot.getChildren().add(new Text("Add items in basket to place order "));
+            newRoot.getChildren().add(new Text("Add items in basket to place report "));
             newStage.setScene(new Scene(newRoot, 300, 200));
             newStage.show();
         }else {

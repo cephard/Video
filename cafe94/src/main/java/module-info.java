@@ -16,6 +16,8 @@ module self {
     exports staff;
     opens staff to javafx.fxml;
 
+    exports report;
+    opens report to javafx.fxml;
     opens basket to javafx.fxml;
     exports basket;
 }

@@ -135,9 +135,9 @@ public class BasketLoader {
     }
 
     /**
-     * Stores the order history for a given user.
+     * Stores the report history for a given user.
      *
-     * @param userID    The ID of the user for whom the order history is to be stored.
+     * @param userID    The ID of the user for whom the report history is to be stored.
      * @param orderList The list of orders to be stored.
      */
     public void storeOrder(String userID, String orderList) {
