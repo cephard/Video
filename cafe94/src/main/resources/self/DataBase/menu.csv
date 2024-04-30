@@ -1,0 +1,13 @@
+Name,Type,Price,Calories,Vegan,Quantity,ImagePath
+croissant,Pastry,2.10,230,false,1,cafe94/src/main/resources/self/IMAGES/crossiant.png
+avocadoToast,Breakfast,5.75,320,true,1,cafe94/src/main/resources/self/IMAGES/Avocado_Toast.png
+capreseSalad,Salad,7.99,250,false,1,cafe94/src/main/resources/self/IMAGES/Caprese_Salad.png
+grilledSandwich,Sandwich,4.93,480,false,1,cafe94/src/main/resources/self/IMAGES/Grilled_Sandwich.png
+blueBerryMuffin,Pastry,2.99,350,false,1,cafe94/src/main/resources/self/IMAGES/Blueberry_Muffin.png
+quionaSalad,Salad,7.19,320,true,1,cafe94/src/main/resources/self/IMAGES/Quinoa_Salad.png
+veggieWrap,Sandwich,6.99,280,true,1,cafe94/src/main/resources/self/IMAGES/Veggie_Wrap.jpg
+brothBowl,Soup,7.99,470,true,1,cafe94/src/main/resources/self/IMAGES/Broth_Bowl.png
+chaiLatte,Coffee,3.99,120,false,1,cafe94/src/main/resources/self/IMAGES/Chai_Latte.png
+creamBagel,Snack,3.49,350,false,1,cafe94/src/main/resources/self/IMAGES/Cream_Bagel.png
+fruitSmoothie,Beverage,5.99,200,true,1,cafe94/src/main/resources/self/IMAGES/Fruit_Smoothie.png
+clubSandwich,Sandwich,8.49,650,false,1,cafe94/src/main/resources/self/IMAGES/Club_Sandwich.png

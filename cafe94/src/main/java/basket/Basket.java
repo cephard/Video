@@ -42,7 +42,7 @@ public class Basket {
       this.voucher = voucher;
     }
 
-   
+
     public void addItem(String name, double price) {
        /*addItem function works when name and price arguments are passed.
         creating Item class object and adding to array list */

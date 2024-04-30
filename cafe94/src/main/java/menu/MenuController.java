@@ -23,17 +23,15 @@ import java.io.IOException;
 public class MenuController {
 
 
+
+
     Result cTypeData = Result.getInstance();
     LoginController data = LoginController.getInstance();
     MenuDataController itemData = new MenuDataController();
     Basket basket = new Basket(data.getUserID(), 0);
     BasketLoader basketLoader = new BasketLoader();
 
-    public void change(){
-
-    }
    // String customerType = cTypeData.getCustomerType();
-
     @FXML private Text item1;
     @FXML private Text item2;
     @FXML private Text item3;
@@ -47,6 +45,30 @@ public class MenuController {
     @FXML private Text item11;
     @FXML private Text item12;
     @FXML private Text userName;
+
+    @FXML
+    private StackPane stackPane2;
+
+    @FXML
+    private StackPane stackPane3;
+    @FXML
+    private StackPane stackPane4;
+    @FXML
+    private StackPane stackPane5;
+    @FXML
+    private StackPane stackPane6;
+    @FXML
+    private StackPane stackPane7;
+    @FXML
+    private StackPane stackPane8;
+    @FXML
+    private StackPane stackPane9;
+    @FXML
+    private StackPane stackPane10;
+    @FXML
+    private StackPane stackPane11;
+    @FXML
+    private StackPane stackPane12;
     @FXML private TextArea showBasketItems;
     @FXML private Text showBasketItems2;
     @FXML private Text customerType;

@@ -20,4 +20,11 @@ module self {
     opens report to javafx.fxml;
     opens basket to javafx.fxml;
     exports basket;
+    exports transaction;
+    exports waiterOrder;
+    exports waiterSpecials;
+
+     opens transaction to javafx.fxml;
+     opens waiterOrder to  javafx.fxml;
+     opens waiterSpecials  to javafx.fxml;
 }

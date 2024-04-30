@@ -5,24 +5,14 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.ListView;
 import self.App;
-import staff.Staff;
-import staff.StaffDataController;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Map;
 
 /**
  * Controller class for managing reports in the system.
  */
 public class AttendanceController {
-
-    /**
-     * Reference to the current report retrieved from the Staff.
-     */
-    Report report = new Report();
-
     /**
      * ListView component to display the report staff members.
      */
@@ -38,6 +28,7 @@ public class AttendanceController {
     private void switchToStaff() throws IOException {
         App.setRoot("staff");
     }
+
     /**
      * Initializes the controller, populating the report ListView with staff attendance records.
      */
@@ -54,7 +45,6 @@ public class AttendanceController {
         }
         reportListView.setItems(attendanceRecords);
     }
-
 
     /**
      * Returns to the start view.

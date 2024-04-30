@@ -91,7 +91,13 @@ public class StaffMemberController {
                 switchToAttendanceReport();
             });
         }
+        else if (staffMember.getRole().equalsIgnoreCase("chef")) {
+                secondaryDuty.setOnMouseClicked(mouseEvent -> {
+                    switchToSpecials();
+                });
+        }
     }
+
 
     public void getOrders(){
         if(staffMember.getRole().equals("deliveryDriver")) {
@@ -158,8 +164,8 @@ public class StaffMemberController {
     private void setChefDuties() {
         firstRole.setText("Make Order");
         secondRole.setText("Serve Customer");
-        thirdRole.setText("Daily Special");
-        forthRole.setText("Cooked Orders");
+        forthRole.setText("Daily Special");
+        thirdRole.setText("Cooked Orders");
     }
 
     private void setDriverDuties() {
@@ -181,6 +187,15 @@ public class StaffMemberController {
         private void switchToReport() {
         try {
             App.setRoot("report");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @FXML
+    private void switchToSpecials() {
+        try {
+            App.setRoot("specialMenu");
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
