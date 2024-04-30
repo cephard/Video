@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<SplitPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@menucss.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.LoginController">
+    <items>
+        <GridPane prefHeight="334.0" prefWidth="584.0" stylesheets="@menucss.css">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="238.0" minWidth="10.0" prefWidth="86.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="379.0" minWidth="10.0" prefWidth="379.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="356.0" minWidth="10.0" prefWidth="132.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="312.0" minHeight="10.0" prefHeight="86.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="312.0" minHeight="0.0" prefHeight="210.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="279.0" minHeight="0.0" prefHeight="97.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="279.0" minHeight="10.0" prefHeight="19.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <VBox alignment="CENTER_LEFT" prefHeight="268.0" prefWidth="379.0" spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <children>
+                        <Label prefHeight="29.0" prefWidth="160.0" text="Manager UserName">
+                            <font>
+                                <Font size="15.0" />
+                            </font></Label>
+                        <TextField fx:id="UserNameButton" promptText="Enter User Name">
+                            <font>
+                                <Font size="15.0" />
+                            </font></TextField>
+                        <Label prefHeight="30.0" prefWidth="70.0" text="Password">
+                            <font>
+                                <Font size="15.0" />
+                            </font></Label>
+                        <PasswordField fx:id="passwordButton" promptText="Enter User Password">
+                            <font>
+                                <Font size="15.0" />
+                            </font></PasswordField>
+                    </children>
+                </VBox>
+                <VBox spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <GridPane.margin>
+                        <Insets />
+                    </GridPane.margin>
+                    <children>
+                        <HBox />
+                        <HBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="372.0" spacing="20.0">
+                            <children>
+                                <Button fx:id="backButton" mnemonicParsing="false" onAction="#switchToView" prefHeight="39.0" prefWidth="66.0" text="Back" />
+                                <Button fx:id="resultButton" layoutX="84.0" layoutY="132.0" mnemonicParsing="false" onAction="#switchToResult" prefHeight="39.0" prefWidth="80.0" text="Login" />
+                                <Text fx:id="loginStatus" layoutX="59.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="183.3999877929689">
+                                </Text>
+                            </children>
+                        </HBox>
+                    </children>
+                    <padding>
+                        <Insets top="10.0" />
+                    </padding>
+                </VBox>
+                <Label alignment="CENTER" prefHeight="29.0" prefWidth="376.0" text="Employee Portal !" textAlignment="CENTER" GridPane.columnIndex="1">
+                    <font>
+                        <Font size="40.0" />
+                    </font>
+                </Label>
+            </children>
+        </GridPane>
+    </items>
+</SplitPane>
